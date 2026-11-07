@@ -1,0 +1,1374 @@
+<!doctype html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Оправи бюджета 2027</title>
+<meta name="description" content="Проектобюджетът за 2027 г. харчи 55,97 млрд. € при приходи 51,07 млрд. €. Съкрати или увеличи всеки ред, докато се побере, и покажи своя бюджет.">
+<meta property="og:title" content="Оправи бюджета 2027">
+<meta property="og:description" content="Проектобюджетът за 2027 г. не се побира с 4,91 млрд. €. Оправи го ред по ред.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="bg_BG">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:url" content="https://bdpesho.github.io/Opravi-Budjeta/">
+<meta property="og:image" content="https://bdpesho.github.io/Opravi-Budjeta/og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Оправи бюджета 2027: лентата на приходите и червеният заем от 4,91 млрд. €. Можеш ли да го оправиш?">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Оправи бюджета 2027">
+<meta name="twitter:description" content="Проектобюджетът за 2027 г. не се побира с 4,91 млрд. €. Оправи го ред по ред.">
+<meta name="twitter:image" content="https://bdpesho.github.io/Opravi-Budjeta/og.png">
+<meta name="theme-color" content="#2f6b4a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@300..900&family=Sofia+Sans+Condensed:wght@400..900&family=Sofia+Sans+Extra+Condensed:wght@700..900&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --paper:#eef1e8;--paper-2:#e4e9dd;--sheet:#f8faf5;--ink:#1d2a24;--ink-2:#3f4d45;--ink-3:#5d6a62;
+  --rule:#cbd4c6;--rule-2:#dde3d8;--green:#2f6b4a;--green-deep:#234f37;--green-soft:#dbe8de;
+  --red:#c8202f;--red-soft:#f7d9db;--gain:#25603f;
+  --h-violet:#6c4d91;--h-copper:#8a5a2b;--h-green:#2f7550;--h-blue:#2d5b96;--h-ochre:#9a7615;
+  --h-teal:#2f6f73;--h-olive:#5c6c22;--h-rose:#9a4f6e;--h-grey:#6f7a73;--h-slate:#56627e;
+  --cond:"Sofia Sans Condensed","Sofia Sans","Arial Narrow",sans-serif;
+  --xcond:"Sofia Sans Extra Condensed","Sofia Sans Condensed","Arial Narrow",sans-serif;
+  --sans:"Sofia Sans",system-ui,"Segoe UI",sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --row:32px;
+}
+*{box-sizing:border-box}
+html{background:var(--paper)}
+body{margin:0;background:var(--paper);color:var(--ink);font:470 15px/1.4 var(--sans);-webkit-font-smoothing:antialiased;font-feature-settings:"tnum" 0}
+::selection{background:var(--green);color:#fff}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+a{color:var(--green-deep);text-underline-offset:3px;text-decoration-thickness:1px}
+.num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- header band ---------- */
+.band{position:relative;background:var(--green);color:#f3f6ef;overflow:hidden}
+.band svg.gl{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.band-in{position:relative;display:flex;align-items:center;gap:20px;padding:14px clamp(16px,3vw,40px);min-height:84px}
+.title{margin:0;font:800 clamp(30px,4vw,48px)/1 var(--cond);letter-spacing:-.01em;white-space:nowrap}
+.title .yr{color:#f2d48a}
+.serial{display:inline-flex;align-items:center;gap:6px;background:var(--paper);color:var(--red);font:700 13px/1 var(--cond);letter-spacing:.14em;padding:6px 9px;white-space:nowrap}
+.serial b{font-weight:800}
+.band .sp{flex:1}
+.seg{display:inline-flex;border:1.5px solid rgba(243,246,239,.75)}
+.seg button{background:transparent;border:0;color:inherit;padding:7px 11px;font-weight:700;font-size:13px;letter-spacing:.04em}
+.seg button[aria-pressed="true"]{background:#f3f6ef;color:var(--green-deep)}
+.btn-ex{display:inline-flex;align-items:center;gap:8px;background:#f3f6ef;color:var(--green-deep);border:0;padding:11px 18px;font:800 16px/1 var(--cond);letter-spacing:.02em}
+.btn-ex:hover{background:#fff}
+.btn-ex svg{width:18px;height:18px}
+.btn-help{background:transparent;border:1.5px solid rgba(243,246,239,.75);color:inherit;padding:7px 11px;font-weight:700;font-size:13px}
+
+/* ---------- capacity ---------- */
+.cap{padding:18px clamp(16px,3vw,40px) 14px;border-bottom:1.5px solid var(--ink);background:var(--paper)}
+.cap-top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:10px 32px;margin-bottom:14px}
+.status h2{margin:0;font:800 clamp(28px,3.4vw,42px)/1.02 var(--cond);letter-spacing:-.005em}
+.status h2 em{font-style:normal;color:var(--red)}
+.status h2 em.ok{color:var(--gain)}
+.status p{margin:6px 0 0;color:var(--ink-2);max-width:70ch;text-wrap:pretty}
+.kpis{display:flex;gap:26px;flex-wrap:wrap}
+.kpi{display:flex;flex-direction:column;gap:2px;min-width:86px}
+.kpi span{font-size:12px;color:var(--ink-3);font-weight:650;letter-spacing:.02em}
+.kpi b{font:740 22px/1.05 var(--cond)}
+.kpi b.bad{color:var(--red)}
+.kpi b.good{color:var(--gain)}
+.kpi small{font-size:12px;color:var(--ink-3)}
+
+.thread{position:relative;margin-top:22px;height:30px;background:var(--paper-2);box-shadow:inset 0 0 0 1px var(--rule)}
+.thread .run{position:absolute;top:0;bottom:0;left:0;overflow:hidden;transition:width .7s var(--ease),left .7s var(--ease)}
+.thread .fund{background:#2c4636}
+.thread .debt{background:var(--red)}
+.thread .surp{background:transparent;box-shadow:inset 0 0 0 1.5px var(--gain);background-image:repeating-linear-gradient(135deg,transparent 0 6px,rgba(37,96,63,.18) 6px 7px)}
+.thread .win{position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 46px,rgba(0,0,0,.28) 46px 58px)}
+.thread .micro{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);white-space:nowrap;font:700 9px/1 var(--cond);letter-spacing:.22em;color:rgba(255,255,255,.62);user-select:none;padding-left:10px}
+.thread .micro{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 44px),transparent calc(100% - 14px));mask-image:linear-gradient(90deg,#000 calc(100% - 44px),transparent calc(100% - 14px))}
+.thread .tick{position:absolute;top:-6px;bottom:-6px;width:2px;background:var(--ink);transition:left .7s var(--ease)}
+.thread .tick.t3{background:transparent;border-left:2px dashed var(--ink-2)}
+.thread-legend{position:relative;height:34px;margin-top:6px;font-size:12px;color:var(--ink-2)}
+
+.thread-legend span{position:absolute;top:0;white-space:nowrap;transition:left .7s var(--ease)}
+.thread-legend b{color:var(--ink);font-weight:740}
+.thread-legend .l-r{transform:translateX(-100%);text-align:right}
+.thread-legend .l-c{top:17px;padding-right:6px}
+.thread .l3lab{position:absolute;bottom:100%;margin-bottom:5px;transform:translateX(-100%);padding-right:6px;font-size:12px;line-height:1;color:var(--ink-2);white-space:nowrap;transition:left .7s var(--ease)}
+.thread .tick.t3{top:-18px}
+.thread-legend .l-c{border-right:2px solid var(--ink);line-height:1}
+
+/* ---------- app grid ---------- */
+.app{display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,440px)}
+.pane{min-width:0}
+.tree-pane{background:var(--sheet);border-right:1.5px solid var(--ink);display:flex;flex-direction:column;min-height:0}
+.toolbar{display:flex;align-items:center;flex-wrap:wrap;gap:8px 14px;padding:10px 18px;border-bottom:1.5px solid var(--ink);background:var(--sheet)}
+.tabs{display:inline-flex;border:1.5px solid var(--ink)}
+.tabs button{border:0;background:transparent;padding:7px 14px;font-weight:740}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--paper)}
+.lvl{display:inline-flex;align-items:center;gap:4px;font-size:13px;color:var(--ink-3)}
+.lvl button{border:1px solid var(--rule);background:var(--sheet);padding:5px 9px;font-size:13px;font-weight:650;color:var(--ink-2)}
+.lvl button:hover{border-color:var(--ink)}
+.toolbar .hint{margin-left:auto;font-size:13px;color:var(--ink-3)}
+.crumb{position:sticky;top:0;z-index:2;display:flex;align-items:center;gap:6px;height:30px;padding:0 18px;background:var(--paper-2);border-bottom:1px solid var(--rule);font-size:13px;font-weight:650;color:var(--ink-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.crumb i{font-style:normal;color:var(--ink-3)}
+.crumb .u{margin-left:auto;padding-left:12px;font-weight:560;color:var(--ink-3)}
+.tree-scroll{overflow:auto;flex:1;min-height:0;scrollbar-color:#9fac9f var(--sheet)}
+[role="tree"]{outline:none}
+.row{position:relative;display:grid;grid-template-columns:18px 12px 112px minmax(0,1fr) auto;align-items:center;gap:10px;height:var(--row);padding:0 14px 0 calc(14px + var(--lv,0) * 24px);border-bottom:1px solid var(--rule-2);cursor:pointer;user-select:none;transition:opacity .25s var(--ease),background-color .2s}
+.row:hover{background:#fff}
+.row .cv{width:18px;height:18px;display:grid;place-items:center;border:0;background:transparent;padding:0;color:var(--ink-3)}
+.row .cv svg{width:12px;height:12px;transition:transform .2s var(--ease)}
+.row[aria-expanded="true"] .cv svg{transform:rotate(90deg)}
+.row .dot{width:12px;height:12px;border-radius:50%;background:var(--hue)}
+.row .amt{position:relative;align-self:stretch;display:flex;align-items:center;justify-content:flex-end;padding:0 7px;font:650 15px/1 var(--cond);font-variant-numeric:tabular-nums;z-index:0;white-space:nowrap}
+.row .amt i{position:absolute;left:0;top:6px;bottom:6px;z-index:-1;background:var(--hue);opacity:.22;transition:width .6s var(--ease)}
+.row .lab{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.row[aria-level="1"] .lab{font-weight:650}
+.total-row{display:grid;grid-template-columns:18px 12px 112px minmax(0,1fr) auto;align-items:center;gap:10px;height:var(--row);padding:0 14px;background:var(--paper-2);border-bottom:1px solid var(--rule);cursor:default}
+.total-row .amt{text-align:right;padding:0 7px;font:740 15px/1 var(--cond)}
+.total-row .lab{font-weight:740;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.total-row .tag{font-size:12px;font-weight:740;white-space:nowrap}
+.row .tag{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:740;white-space:nowrap}
+.d-good{color:var(--gain)}
+.d-bad{color:var(--red)}
+.row .lock{display:inline-flex;align-items:center;gap:4px;color:var(--ink-3);font-weight:650}
+.row .lock svg{width:12px;height:12px}
+.row.gone .amt i{display:none}
+.row.gone .amt,.row.gone .lab{text-decoration:line-through;text-decoration-thickness:1.5px;color:var(--ink-3)}
+.row[aria-selected="true"]{background:#fff;box-shadow:inset 0 0 0 2px var(--hue)}
+.tree.focus-mode .row.sib .lab,.tree.focus-mode .row.sib .amt{color:var(--ink-3)}
+.tree.focus-mode .row.sib .dot,.tree.focus-mode .row.sib .amt i{opacity:.4}
+.row:focus-visible{outline:2px solid var(--ink);outline-offset:-2px}
+
+.side{display:flex;flex-direction:column;min-height:0;overflow:auto;background:var(--paper)}
+.card{padding:18px 22px;border-bottom:1.5px solid var(--ink)}
+.card h3{margin:0 0 10px;font:800 13px/1 var(--cond);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+.card .sel-name{display:flex;align-items:center;gap:10px;margin:0;font:800 28px/1.05 var(--cond);letter-spacing:0;text-transform:none;color:var(--ink)}
+.sel-name .dot{flex:none;width:14px;height:14px;border-radius:50%;background:var(--hue)}
+.sel-amt{margin:10px 0 2px;font:800 44px/1 var(--xcond);letter-spacing:-.01em}
+.sel-sub{color:var(--ink-2);font-size:14px}
+.sel-sub b{font-weight:740}
+.facts{margin:12px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;font-size:14px;color:var(--ink-2)}
+.facts li{padding-left:14px;position:relative;max-width:62ch}
+.facts li::before{content:"";position:absolute;left:0;top:.6em;width:6px;height:6px;background:var(--hue)}
+.src{margin-top:10px;font-size:12px;color:var(--ink-3)}
+.ctl{margin-top:16px;display:flex;flex-direction:column;gap:12px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.steps button,.ctl-row button{border:1.5px solid var(--ink);background:var(--sheet);padding:9px 0;font:740 16px/1 var(--cond)}
+.steps button:hover,.ctl-row button:hover{background:#fff}
+.steps button:active{transform:translateY(1px)}
+.ctl-row{display:flex;gap:6px}
+.ctl-row button{flex:1;padding:9px 10px;font-size:15px}
+.ctl-row .rm{border-style:dashed}
+.ctl-row .rs{background:var(--ink);color:var(--paper)}
+.ctl-row .rs:hover{background:#000}
+button:disabled{opacity:.38;cursor:not-allowed}
+.range{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;font-size:13px;color:var(--ink-3)}
+.range output{min-width:56px;text-align:right;font:740 16px/1 var(--cond);color:var(--ink)}
+.sel-amt .unit{font:650 16px/1 var(--sans);color:var(--ink-2);letter-spacing:0}
+.modv{display:inline-block;margin-left:6px;padding:1px 6px;border:1px solid var(--rule);font:740 13px/1.3 var(--cond);color:var(--ink-2)}
+.laffer{border-top:1px solid var(--rule-2);padding-top:10px}
+.laf-h{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:13px}
+.laf-h b{font:740 13px/1 var(--cond);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+.laf-h .now{font:740 15px/1 var(--cond);color:var(--ink)}
+.laffer svg{display:block;width:100%;height:auto;margin:6px 0 4px;overflow:visible}
+.laffer svg path{fill:none;stroke:var(--ink-2);stroke-width:2}
+.laffer svg .base{stroke:var(--rule);stroke-dasharray:3 3}
+.laffer svg .pk{stroke:var(--ink-3);stroke-dasharray:2 3}
+.laffer svg circle{fill:var(--hue);stroke:var(--sheet);stroke-width:2}
+.laffer p{margin:0;font-size:12.5px;color:var(--ink-3);max-width:62ch}
+.laffer.over p{color:var(--red)}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:28px;background:transparent}
+input[type=range]::-webkit-slider-runnable-track{height:4px;background:linear-gradient(90deg,var(--rule) 0 0) ,var(--rule)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;margin-top:-7px;background:var(--hue,var(--ink));border:2px solid var(--sheet);box-shadow:0 0 0 1.5px var(--ink)}
+input[type=range]::-moz-range-track{height:4px;background:var(--rule)}
+input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:0;background:var(--hue,var(--ink));border:2px solid var(--sheet);box-shadow:0 0 0 1.5px var(--ink)}
+.lockmsg{margin-top:14px;display:flex;gap:10px;align-items:flex-start;padding:10px 12px;background:var(--paper-2);font-size:14px;color:var(--ink-2)}
+.lockmsg svg{flex:none;width:16px;height:16px;margin-top:2px}
+
+.log ul{margin:0;padding:0;list-style:none}
+.log li{display:grid;grid-template-columns:10px minmax(0,1fr) auto auto;gap:10px;align-items:center;padding:7px 0;border-top:1px solid var(--rule-2);font-size:14px}
+.log li:first-child{border-top:0}
+.log li .dot{width:10px;height:10px;border-radius:50%;background:var(--hue)}
+.log li .nm{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;cursor:pointer;line-height:1.3}
+.log li .nm small{color:var(--ink-3);margin-left:6px}
+.log li .ef{font:740 14px/1 var(--cond)}
+.log li button{border:1px solid var(--rule);background:transparent;padding:4px 8px;font-size:12px;font-weight:740;color:var(--ink-2)}
+.log li button:hover{border-color:var(--ink)}
+.log .empty{color:var(--ink-3);font-size:14px;margin:0}
+.log .resume{margin-top:10px;border:1px solid var(--rule);background:transparent;padding:6px 10px;font-size:13px;font-weight:740;color:var(--ink-2)}
+.log .resume:hover{border-color:var(--ink)}
+.log-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.log-head h3{margin:0}
+.log-head button{border:0;background:transparent;padding:0;font-size:13px;font-weight:740;color:var(--ink-2);text-decoration:underline;text-underline-offset:3px}
+.log-sum{margin:8px 0 0;font-size:13px;color:var(--ink-3)}
+
+.tm{position:relative;height:230px;background:var(--paper-2)}
+.tm .c{position:absolute;overflow:hidden;padding:4px 6px;color:#fff;font:650 12px/1.15 var(--cond);border:1px solid var(--paper);cursor:pointer;transition:left .6s var(--ease),top .6s var(--ease),width .6s var(--ease),height .6s var(--ease)}
+.tm .c.lk{background-image:repeating-linear-gradient(135deg,transparent 0 5px,rgba(255,255,255,.18) 5px 6px)}
+.tm .c.ch{box-shadow:inset 0 0 0 2px #fff}
+.tm .c.on{outline:3px solid var(--ink);outline-offset:-3px;z-index:1}
+.tm .c b{display:block;font-weight:740}
+.tm-leg{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:8px;font-size:12px;color:var(--ink-3)}
+.tm-leg i{display:inline-block;width:10px;height:10px;margin-right:5px;vertical-align:-1px;background:var(--h-grey)}
+.tm-leg i.ch{background:#fff;box-shadow:inset 0 0 0 2px var(--ink-3)}
+.tm-leg i.lk{background:var(--h-grey);background-image:repeating-linear-gradient(135deg,transparent 0 3px,rgba(255,255,255,.4) 3px 4px)}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:#cdd6cf;padding:0 clamp(16px,3vw,40px);font-size:14px}
+footer summary{display:flex;align-items:center;gap:12px;min-height:48px;padding:12px 0;cursor:pointer;list-style:none;flex-wrap:wrap}
+footer summary::-webkit-details-marker{display:none}
+footer summary svg{flex:none;width:12px;height:12px;color:#f3f6ef;transition:transform .2s var(--ease)}
+footer details[open] summary svg{transform:rotate(90deg)}
+footer summary b{font:800 13px/1 var(--cond);letter-spacing:.12em;text-transform:uppercase;color:#f3f6ef}
+footer summary span{font-size:13px;color:#9eaaa2}
+footer summary:hover span{color:#cdd6cf}
+footer details[open]{padding-bottom:36px}
+footer details[open] .cols{padding-top:10px}
+footer .cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px 40px;max-width:1360px}
+footer h4{margin:0 0 6px;font:800 13px/1 var(--cond);letter-spacing:.12em;text-transform:uppercase;color:#f3f6ef}
+footer p{margin:0 0 8px;max-width:62ch}
+footer a{color:#e9efe6}
+footer .fine{margin-top:20px;font-size:12px;color:#9eaaa2}
+
+/* ---------- export dialog ---------- */
+dialog{border:0;padding:0;background:var(--paper);color:var(--ink);max-width:min(980px,calc(100vw - 24px));width:100%;box-shadow:0 18px 60px rgba(14,24,18,.35)}
+dialog::backdrop{background:rgba(20,32,25,.62)}
+.dlg-h{display:flex;align-items:center;gap:12px;padding:14px 20px;background:var(--green);color:#f3f6ef}
+.dlg-h h2{margin:0;font:800 24px/1 var(--cond)}
+.dlg-h .x{margin-left:auto;background:transparent;border:1.5px solid rgba(243,246,239,.7);color:inherit;width:34px;height:34px;display:grid;place-items:center;padding:0}
+.dlg-b{padding:18px 20px 20px;display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:20px;align-items:start}
+.prev{background:var(--paper-2);display:grid;place-items:center;padding:10px;min-height:200px}
+.prev canvas{max-width:100%;max-height:62vh;height:auto;box-shadow:0 6px 22px rgba(14,24,18,.18)}
+.dlg-c{display:flex;flex-direction:column;gap:10px}
+.dlg-c label{font-size:13px;font-weight:740;color:var(--ink-2)}
+.dlg-c .fmt{display:flex;flex-direction:column;gap:6px}
+.dlg-c .fmt button{border:1.5px solid var(--ink);background:var(--sheet);padding:9px 10px;text-align:left;font-weight:740}
+.dlg-c .fmt button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.dlg-c .fmt small{display:block;font-weight:560;font-size:12px;opacity:.75}
+.dlg-c .go{border:0;background:var(--green);color:#fff;padding:13px;font:800 17px/1 var(--cond)}
+.dlg-c .go:hover{background:var(--green-deep)}
+.dlg-c .alt{border:1.5px solid var(--ink);background:transparent;padding:10px;font-weight:740}
+.dlg-c .note{font-size:12px;color:var(--ink-3)}
+.dlg-c .fmt-hint{font-size:13px;color:var(--ink-2);border-left:3px solid var(--green);padding:2px 0 2px 8px;margin:0}
+.prev.long{display:block;max-height:62vh;overflow:auto;overscroll-behavior:contain}
+/* ---------- how-to-play popup ---------- */
+#howDlg{max-width:min(580px,calc(100vw - 24px))}
+.how-b{padding:6px 22px 22px}
+.how-steps{list-style:none;margin:0;padding:0;counter-reset:st}
+.how-steps li{counter-increment:st;display:grid;grid-template-columns:44px minmax(0,1fr);gap:4px 14px;padding:16px 0;border-top:1px solid var(--rule-2)}
+.how-steps li:first-child{border-top:0}
+.how-steps li::before{content:counter(st);grid-row:span 2;align-self:start;display:grid;place-items:center;width:44px;height:44px;border:1.5px solid var(--green);color:var(--green);font:800 26px/1 var(--xcond)}
+.how-steps b{font:800 20px/1.1 var(--cond);color:var(--ink);align-self:center}
+.how-steps span{font-size:15px;line-height:1.45;color:var(--ink-2);text-wrap:pretty}
+.how-b .go{display:block;width:100%;margin-top:6px;border:0;background:var(--green);color:#fff;padding:14px;font:800 18px/1 var(--cond)}
+.how-b .go:hover{background:var(--green-deep)}
+.prev.long canvas{display:block;width:100%;max-height:none;margin:0 auto}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);opacity:0;background:var(--ink);color:var(--paper);padding:10px 16px;font-weight:650;transition:opacity .25s,transform .35s var(--ease);pointer-events:none;z-index:50}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+/* ---------- mobile sheet ---------- */
+.sheet{display:none}
+
+/* ---------- desktop: fit the working area to the viewport ---------- */
+@media (min-width:1024px){
+  .shell{height:100vh;height:100dvh;display:flex;flex-direction:column}
+  .app{flex:1;min-height:0}
+  .tree-pane,.side{min-height:0;height:100%}
+}
+@media (max-width:1023px){
+  .app{grid-template-columns:1fr}
+  .tree-pane{border-right:0;border-bottom:1.5px solid var(--ink)}
+  .tree-scroll{overflow:visible}
+  .crumb{top:var(--capH,0px)}
+  .cap{position:sticky;top:0;z-index:5}
+  .cap.compact .status p,.cap.compact .kpis,.cap.compact .thread-legend,.cap.compact .l3lab{display:none}
+  .cap.compact{padding-top:10px;padding-bottom:8px}
+  .cap.compact .status h2{font-size:24px}
+  .cap.compact .cap-top{margin-bottom:8px}
+  footer .cols{grid-template-columns:1fr}
+  .dlg-b{grid-template-columns:1fr}
+  .sel-card{display:none}
+  .sheet{display:block;position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--sheet);border-top:2px solid var(--ink);padding:10px 16px calc(12px + env(safe-area-inset-bottom));box-shadow:0 -10px 30px rgba(14,24,18,.16);transform:translateY(110%);transition:transform .35s var(--ease)}
+  .sheet.on{transform:none}
+  .sheet .s-top{display:flex;align-items:baseline;gap:10px;margin-bottom:8px}
+  .sheet .s-top .dot{width:11px;height:11px;border-radius:50%;background:var(--hue);flex:none;align-self:center}
+  .sheet .s-top b{font:800 19px/1.1 var(--cond);flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .sheet .s-top span{font:740 17px/1 var(--cond)}
+  .sheet .s-top button{border:0;background:transparent;font-size:13px;font-weight:740;color:var(--ink-3);padding:4px}
+  .sheet .s-ctl{display:grid;grid-template-columns:repeat(4,1fr) auto;gap:6px}
+  .sheet .s-ctl button{border:1.5px solid var(--ink);background:#fff;padding:10px 0;font:740 16px/1 var(--cond)}
+  .sheet .s-ctl .rs{background:var(--ink);color:var(--paper);padding:10px 12px}
+  .sheet .s-meta{margin-top:6px;font-size:12px;color:var(--ink-3)}
+  body.has-sheet footer{padding-bottom:150px}
+}
+@media (max-width:640px){
+  .prev.long{max-height:42vh}
+  .how-b{padding:2px 16px 16px}
+  .how-steps li{grid-template-columns:34px minmax(0,1fr);gap:3px 12px;padding:12px 0}
+  .how-steps li::before{width:34px;height:34px;font-size:21px}
+  .how-steps b{font-size:18px}
+  .how-steps span{font-size:14.5px;line-height:1.4}
+  .status h2 em.ok{display:none} /* the surplus figure is in the KPI below; keeps the headline one line */
+  .band-in{flex-wrap:wrap;gap:10px;min-height:0;padding-top:12px;padding-bottom:12px}
+  .band .sp{display:none}
+  .title{font-size:30px;flex-basis:100%}
+  .btn-ex{margin-left:auto}
+  .row{grid-template-columns:16px 10px 84px minmax(0,1fr) auto;gap:8px;padding-left:calc(10px + var(--lv,0) * 14px);padding-right:10px}
+  .row .amt{font-size:14px}
+  .total-row{grid-template-columns:16px 10px 84px minmax(0,1fr) auto;gap:8px;padding:0 10px}
+  .total-row .amt{font-size:14px}
+  .row .tag .lock span{display:none}
+  .toolbar .hint{display:none}
+  .kpis{gap:16px}
+  .kpi b{font-size:19px}
+  .thread-legend{font-size:12px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+  <header class="band">
+    <svg class="gl" id="guilloche" aria-hidden="true"></svg>
+    <div class="band-in">
+      <h1 class="title"><span data-t="title">Оправи бюджета</span> <span class="yr">2027</span></h1>
+      <span class="serial num" id="serial" tabindex="0"><span data-t="serialLab">БГ 2027</span> · <b id="serialNo">0000001</b></span>
+      <span class="sp"></span>
+      <button class="btn-help" id="helpBtn" type="button" data-t="howBtn">Как се играе</button>
+      <div class="seg" role="group" aria-label="Език / Language">
+        <button type="button" data-lang="bg" aria-pressed="true">БГ</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="btn-ex" id="exportBtn" type="button">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 12.5V3M6 7l4-4 4 4M4 10.5V17h12v-6.5"/></svg>
+        <span data-t="export">Сподели бюджета</span>
+      </button>
+    </div>
+  </header>
+
+  <section class="cap" id="cap" aria-labelledby="statusH">
+    <div class="cap-top">
+      <div class="status">
+        <h2 id="statusH"></h2>
+        <p id="statusP"></p>
+      </div>
+      <div class="kpis" id="kpis"></div>
+    </div>
+    <div class="thread" id="thread" role="img"></div>
+    <div class="thread-legend" id="threadLegend"></div>
+    <div class="sr" aria-live="polite" id="live"></div>
+  </section>
+
+  <main class="app">
+    <section class="pane tree-pane" aria-label="Бюджет">
+      <div class="toolbar">
+        <div class="tabs" role="tablist" aria-label="Страна на бюджета">
+          <button role="tab" id="tab-S" aria-selected="true" aria-controls="tree" data-side="S" data-t="spending">Разходи</button>
+          <button role="tab" id="tab-R" aria-selected="false" aria-controls="tree" data-side="R" data-t="revenue">Приходи</button>
+        </div>
+        <div class="lvl"><span data-t="expand">Покажи</span>
+          <button type="button" data-level="1" data-t="lvl1">Групи</button>
+          <button type="button" data-level="2" data-t="lvl2">Подгрупи</button>
+          <button type="button" data-level="9" data-t="lvlAll">Всичко</button>
+        </div>
+        <span class="hint" data-t="hint">Избери ред, после го съкрати или увеличи. Клавиши: ↑↓ ←→, − и +</span>
+      </div>
+      <div class="tree-scroll" id="treeScroll">
+        <div class="crumb" id="crumb"></div>
+        <div class="total-row" id="treeTotal"></div>
+        <div class="tree" id="tree" role="tree" aria-labelledby="tab-S"></div>
+      </div>
+    </section>
+
+    <aside class="pane side" aria-label="Детайли">
+      <section class="card sel-card" id="selCard" aria-live="off"></section>
+      <section class="card log" id="logCard"></section>
+      <section class="card">
+        <h3 data-t="mapTitle">Карта на разходите</h3>
+        <div class="tm" id="tm"></div>
+        <div class="tm-leg"><span><i class="ch"></i><span data-t="legChanged">променено</span></span><span><i class="lk"></i><span data-t="legLocked">заключено</span></span><span data-t="legNote">Размерът е според твоя бюджет.</span></div>
+      </section>
+    </aside>
+  </main>
+</div>
+
+<div class="sheet" id="sheet" aria-label="Избран ред"></div>
+
+<footer>
+ <details id="foot">
+  <summary><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 2l4 4-4 4"/></svg><b data-t="fSum">Източници, методика и ограничения</b><span data-t="fSumNote">Проектобюджет 2027, Министерство на финансите, 6.11.2026</span></summary>
+  <div class="cols">
+    <div>
+      <h4 data-t="fSrc">Източници</h4>
+      <p data-t-html="fSrc1"></p>
+      <p data-t-html="fSrc2"></p>
+    </div>
+    <div>
+      <h4 data-t="fHow">Как се смята</h4>
+      <p data-t="fHow1"></p>
+      <p data-t="fHow2"></p>
+    </div>
+    <div>
+      <h4 data-t="fLimits">Ограничения</h4>
+      <p data-t="fLim1"></p>
+      <p data-t="fLim2"></p>
+    </div>
+  </div>
+  <p class="fine" data-t="fFine"></p>
+ </details>
+</footer>
+
+<dialog id="dlg" aria-labelledby="dlgTitle">
+  <div class="dlg-h"><h2 id="dlgTitle" data-t="dlgTitle">Сподели бюджета си</h2>
+    <button class="x" type="button" id="dlgClose" aria-label="Затвори"><svg viewBox="0 0 16 16" width="14" height="14" stroke="currentColor" stroke-width="2"><path d="M3 3l10 10M13 3 3 13"/></svg></button></div>
+  <div class="dlg-b">
+    <div class="prev"><canvas id="card" width="1200" height="630"></canvas></div>
+    <div class="dlg-c">
+      <label data-t="format">Формат</label>
+      <div class="fmt">
+        <button type="button" data-fmt="wide" aria-pressed="true"><span data-t="fmtWide">Пост</span><small>1200 × 630</small></button>
+        <button type="button" data-fmt="tall" aria-pressed="false"><span data-t="fmtTall">Портрет</span><small>1080 × 1350</small></button>
+        <button type="button" data-fmt="list" aria-pressed="false"><span data-t="fmtList">Пълен списък</span><small id="fmtListSize">1080 × …</small></button>
+      </div>
+      <p class="note fmt-hint" id="fmtHint" hidden></p>
+      <button class="go" type="button" id="dl" data-t="download">Свали картинката</button>
+      <button class="alt" type="button" id="share" data-t="share" hidden>Сподели картинката</button>
+      <button class="alt" type="button" id="copy" data-t="copyLink">Копирай линк към бюджета</button>
+      <p class="note" data-t="exportNote">Линкът пази промените ти. Нищо не се изпраща до сървър.</p>
+    </div>
+  </div>
+</dialog>
+<dialog id="howDlg" aria-labelledby="howTitle">
+  <div class="dlg-h"><h2 id="howTitle" data-t="howBtn">Как се играе</h2>
+    <button class="x" type="button" id="howX" aria-label="Затвори"><svg viewBox="0 0 16 16" width="14" height="14" stroke="currentColor" stroke-width="2"><path d="M3 3l10 10M13 3 3 13"/></svg></button></div>
+  <div class="how-b">
+    <ol class="how-steps">
+      <li><b data-t="how1h">Бюджетът е на минус</b><span id="how1"></span></li>
+      <li><b data-t="how2h">Разгледай разходите</b><span data-t="how2"></span></li>
+      <li><b data-t="how3h">Пипни и приходите</b><span data-t="how3"></span></li>
+      <li><b data-t="how4h">Покажи резултата</b><span data-t="how4"></span></li>
+    </ol>
+    <button type="button" class="go" id="howGo" data-t="howGo" autofocus>Започни</button>
+  </div>
+</dialog>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+/* ===================== DATA =====================
+   Ministry of Finance, draft State Budget Act 2027 and updated medium-term budget forecast 2027–2029
+   (published 6 Nov 2026). Consolidated fiscal programme (КФП), cash basis, € million.
+   Spending by function: forecast Table III-1 (reserve distributed). Totals: Table II-1. Revenue: Table II-1 and section 1.2. */
+const GDP = 141302;            // nominal GDP 2027, € m (forecast, Table macro)
+const DRAFT_DEFICIT = 4907.0;  // Table II-1
+const H = {violet:'var(--h-violet)',copper:'var(--h-copper)',green:'var(--h-green)',blue:'var(--h-blue)',ochre:'var(--h-ochre)',teal:'var(--h-teal)',olive:'var(--h-olive)',rose:'var(--h-rose)',grey:'var(--h-grey)',slate:'var(--h-slate)'};
+const HEX = {violet:'#6c4d91',copper:'#8a5a2b',green:'#2f7550',blue:'#2d5b96',ochre:'#9a7615',teal:'#2f6f73',olive:'#5c6c22',rose:'#9a4f6e',grey:'#6f7a73',slate:'#56627e'};
+const SRC_F = {bg:'АСБП 2027–2029, табл. III-1 (разходи по функции)',en:'Medium-term forecast 2027–2029, Table III-1 (spending by function)'};
+const SRC_R = {bg:'АСБП 2027–2029, раздел 1.2 и табл. II-1',en:'Medium-term forecast 2027–2029, section 1.2 and Table II-1'};
+
+const TREE = {
+ S:{id:'S',bg:'Всички разходи',en:'All spending',hue:'grey',kids:[
+  {id:'soc',bg:'Социална защита',en:'Social protection',hue:'violet',kids:[
+    {id:'pen',bg:'Пенсии',en:'Pensions',v:14756.7,f:{bg:['Индексация с 7,8% от 1 юли 2027 г. по „швейцарското правило“ — струва 552,6 млн. €.','Минималната пенсия става 374,62 € от 1 юли.','Разходите на НОИ за пенсии: 14,67 млрд. €.'],en:['Indexed by 7.8% from 1 July 2027 under the “Swiss rule” — costs €552.6m.','The minimum pension rises to €374.62 from 1 July.','NOI pension spending: €14.67bn.']}},
+    {id:'ben',bg:'Социални помощи и обезщетения',en:'Social assistance and benefits',v:3176.0,f:{bg:['Спад спрямо очакваните 3,60 млрд. € за 2026 г.','Включва помощите за отопление (132,6 млн. €).'],en:['Down from an expected €3.60bn in 2026.','Includes heating aid (€132.6m).']}},
+    {id:'prg',bg:'Социални програми и заетост',en:'Social and employment programmes',v:2461.6,f:{bg:['Програми, дейности и служби по социалното осигуряване, подпомагането и заетостта.'],en:['Programmes and services for social insurance, assistance and employment.']}}
+  ]},
+  {id:'hea',bg:'Здравеопазване',en:'Health',hue:'green',v:6911.7,f:{bg:['Включва разходите на НЗОК (5,68 млрд. €).','+493 млн. € за здравноосигурителни плащания.'],en:['Includes the Health Insurance Fund (€5.68bn).','+€493m for health insurance payments.']}},
+  {id:'sec',bg:'Отбрана и сигурност',en:'Defence and security',hue:'blue',kids:[
+    {id:'def',bg:'Отбрана',en:'Defence',v:2907.2,f:{bg:['По дефиницията на НАТО отбраната е 3,15 млрд. € — 2,23% от БВП.','Планът е 2,55% от БВП до 2029 г.','Без увеличение на заплатите във военните структури през 2027 г.'],en:['Under NATO’s definition defence is €3.15bn — 2.23% of GDP.','The plan is 2.55% of GDP by 2029.','No pay rise for the military in 2027.']}},
+    {id:'pol',bg:'Полиция и вътрешен ред',en:'Police and public order',v:2670.5,f:{bg:['Без увеличение на заплатите в МВР през 2027 г.'],en:['No pay rise at the Interior Ministry in 2027.']}},
+    {id:'jud',bg:'Съдебна власт',en:'Judiciary',v:870.5,f:{bg:['Бюджетът на съдебната власт в законопроекта е 752,2 млн. €; Висшият съдебен съвет иска 868,1 млн. €.'],en:['The judiciary’s own budget in the bill is €752.2m; the Supreme Judicial Council asks for €868.1m.']}},
+    {id:'pri',bg:'Затвори',en:'Prisons',v:235.6},
+    {id:'civ',bg:'Защита при бедствия и аварии',en:'Civil protection',v:145.5}
+  ]},
+  {id:'edu',bg:'Образование',en:'Education',hue:'ochre',v:5582.2,f:{bg:['Заплатите на педагогическите специалисти растат със 7,5% от 1 януари (170,5 млн. €).'],en:['Teachers’ pay rises by 7.5% from 1 January (€170.5m).']}},
+  {id:'eco',bg:'Икономика и транспорт',en:'Economy and transport',hue:'copper',kids:[
+    {id:'trn',bg:'Транспорт и съобщения',en:'Transport and communications',v:3242.4},
+    {id:'enr',bg:'Енергетика',en:'Energy',v:1422.6,f:{bg:['Включва компенсациите за електроенергия (634,9 млн. €).','През 2026 г. разходите са 2,80 млрд. €.'],en:['Includes electricity compensation (€634.9m).','Expected 2026 spending: €2.80bn.']}},
+    {id:'agr',bg:'Земеделие, гори и риболов',en:'Agriculture, forestry and fishing',v:1165.4},
+    {id:'oec',bg:'Други икономически дейности',en:'Other economic affairs',v:1320.9},
+    {id:'tur',bg:'Туризъм',en:'Tourism',v:47.5},
+    {id:'ind',bg:'Промишленост и строителство',en:'Industry and construction',v:2.8}
+  ]},
+  {id:'gen',bg:'Държавна администрация',en:'General public services',hue:'teal',kids:[
+    {id:'exe',bg:'Изпълнителни и законодателни органи',en:'Executive and legislative bodies',v:2405.7,f:{bg:['Заплатите в бюджетната сфера растат с 5% от 1 януари (без МВР, отбраната и магистратите).','Съкращават се 5 042 щатни бройки.'],en:['Public-sector pay rises 5% from 1 January (except interior, defence and magistrates).','5,042 staff positions are cut.']}},
+    {id:'sci',bg:'Наука',en:'Science',v:500.9},
+    {id:'gsv',bg:'Общи служби',en:'General services',v:107.1}
+  ]},
+  {id:'env',bg:'Жилища, комунални услуги и околна среда',en:'Housing, utilities and environment',hue:'olive',kids:[
+    {id:'hou',bg:'Жилищно строителство и комунални услуги',en:'Housing and community amenities',v:1177.1},
+    {id:'ecl',bg:'Опазване на околната среда',en:'Environmental protection',v:985.9}
+  ]},
+  {id:'cul',bg:'Култура, спорт и религия',en:'Culture, sport and religion',hue:'rose',kids:[
+    {id:'cuc',bg:'Култура',en:'Culture',v:728.2},
+    {id:'spo',bg:'Спорт',en:'Sport',v:150.1},
+    {id:'rel',bg:'Религиозно дело',en:'Religious affairs',v:46.3},
+    {id:'rec',bg:'Почивно дело',en:'Recreation',v:19.3}
+  ]},
+  {id:'eu',bg:'Вноска в бюджета на ЕС',en:'Contribution to the EU budget',hue:'slate',v:1506.8,lock:'eu',f:{bg:['Ръст от 1,28 млрд. € през 2026 г.'],en:['Up from €1.28bn in 2026.']}},
+  {id:'int',bg:'Лихви по дълга',en:'Interest on debt',hue:'grey',v:1425.6,lock:'int',f:{bg:['Ръст от 1,06 млрд. € през 2026 г. — дългът расте.','Нов дълг до 8,6 млрд. € през 2027 г.'],en:['Up from €1.06bn in 2026 — debt is growing.','New borrowing of up to €8.6bn in 2027.']}}
+ ]},
+ R:{id:'R',bg:'Всички приходи',en:'All revenue',hue:'grey',kids:[
+  {id:'tax',bg:'Данъци и осигуровки',en:'Taxes and contributions',hue:'blue',kids:[
+    {id:'soc_c',bg:'Осигуровки и други данъци',en:'Social contributions and other taxes',v:14392.8,hue:'violet',f:{bg:['Социални и здравни осигуровки, местни и други данъци.','Максималният осигурителен доход става 2 400 € от 1 януари (от 2 300 €).','Сумата е изчислена: данъчно-осигурителни приходи минус изброените данъци.'],en:['Social and health contributions, local and other taxes.','The maximum insurable income rises to €2,400 from 1 January (from €2,300).','Computed: tax and contribution revenue minus the itemised taxes.']}},
+    {id:'mod',bg:'Максимален осигурителен доход (МОД)',en:'Maximum insurable income (contribution cap)',v:0,mod:1,hue:'violet',
+     src:{bg:'АСБП 2027–2029, мотиви, раздел 1.2 (+265,1 млн. € при МОД 2 400 €); другите нива са модел',en:'Medium-term forecast 2027–2029, notes, section 1.2 (+€265.1m at a €2,400 cap); other levels are modelled'},
+     f:{bg:['Таванът на заплатата, върху която се плащат осигуровки. Който получава 4 000 € на месец, плаща вноски само върху 2 400 €.','Проектът го вдига от 2 300 € на 2 400 € от 1 януари 2027 г. — +265,1 млн. € вноски, заедно с ефекта от вдигането през август 2026 г.','Колкото по-висок е таванът, толкова по-малко хора са над него, затова всяко следващо вдигане носи все по-малко.'],
+        en:['The cap on the pay that social contributions are charged on. Someone earning €4,000 a month pays contributions on €2,400 only.','The draft raises it from €2,300 to €2,400 from 1 January 2027 — +€265.1m in contributions, including the effect of the August 2026 rise.','The higher the cap, the fewer people earn above it, so each further rise brings in less.']}},
+    {id:'vat',bg:'ДДС',en:'VAT',v:13485.8,hue:'blue',f:{bg:['Ставка 20%, без промяна.','Прагът за регистрация става 60 000 € от 1 януари.'],en:['Rate 20%, unchanged.','The registration threshold rises to €60,000 from 1 January.']}},
+    {id:'pit',bg:'Данък върху доходите на гражданите',en:'Personal income tax',v:5015.2,hue:'green',f:{bg:['Плосък данък 10%, без промяна.','Минималната заплата става 660 € от 1 януари.'],en:['Flat 10% rate, unchanged.','The minimum wage rises to €660 from 1 January.']}},
+    {id:'cit',bg:'Корпоративни данъци',en:'Corporate taxes',v:4686.0,hue:'copper',f:{bg:['Ставка 10%.','Проектът въвежда еднократен данък от 33% върху „свръхпечалбата“ на определени сектори за 2027 г. — 800 млн. € по начислена основа.'],en:['Rate 10%.','The draft adds a one-off 33% tax on “excess profits” in selected sectors for 2027 — €800m on an accrual basis.']}},
+    {id:'exc',bg:'Акцизи',en:'Excise duties',v:4102.9,hue:'ochre',f:{bg:['По-бърз акцизен календар за тютюна.','Нов акциз за коли с мощност над 250 kW.'],en:['A faster excise schedule for tobacco.','A new excise on cars above 250 kW.']}},
+    {id:'cus',bg:'Мита',en:'Customs duties',v:248.5,hue:'grey'},
+    {id:'ins',bg:'Данък върху застрахователните премии',en:'Insurance premium tax',v:48.3,hue:'grey'}
+  ]},
+  {id:'non',bg:'Неданъчни приходи',en:'Non-tax revenue',hue:'teal',v:6278.7,f:{bg:['Такси, дивиденти от държавни дружества (222 млн. €), концесии (243,5 млн. €).','Приходи на Фонд „Сигурност на електроенергийната система“ (1,36 млрд. €).'],en:['Fees, dividends from state companies (€222m), concessions (€243.5m).','Revenue of the Electricity System Security Fund (€1.36bn).']}},
+  {id:'grt',bg:'Помощи и дарения (главно от ЕС)',en:'Grants (mainly EU funds)',hue:'slate',v:2807.0,lock:'grt',f:{bg:['Спад от 5,39 млрд. € през 2026 г.'],en:['Down from €5.39bn in 2026.']}}
+ ]}
+};
+
+/* ===================== I18N ===================== */
+const T = {
+ bg:{title:'Оправи бюджета',serialLab:'БГ 2027',serialTip:'Номер на плана. Изчислява се от твоите промени: еднакви промени дават еднакъв номер, а 0000001 е проектът без промени. Отпечатва се и на картинката.',howBtn:'Как се играе',export:'Сподели бюджета',spending:'Разходи',revenue:'Приходи',expand:'Покажи',lvl1:'Групи',lvl2:'Подгрупи',lvlAll:'Всичко',
+  hint:'Избери ред, после го съкрати или увеличи. Клавиши: ↑↓ ←→, − и +',how1h:'Бюджетът е на минус',how1:(d)=>`Проектът за 2027 г. харчи с ${d} повече, отколкото събира. Тази разлика се покрива със заем. Финансите са в твоите ръце и можеш да ги оправиш.`,how2h:'Разгледай разходите',how2:'Отваряй групите — пенсии, здраве, образование — чак до отделните министерства и университети. Избери ред и намали бюджета му, увеличи го или го премахни, както сметнеш за добре.',how3h:'Можеш да променяш и данъците',how3:'В раздел „Приходи“ можеш да увеличаваш или намаляваш данъците, както и максималния осигурителен доход (МОД). Внимавай: прекалено високите данъци носят по-малко приходи, а не повече.',how4h:'Сподели резултата си',how4:'Когато приключиш, натисни „Сподели бюджета“ и покажи на останалите какви промени искаш.',howGo:'Започни',
+  mapTitle:'Карта на разходите',legChanged:'променено',legLocked:'заключено',legNote:'Размерът е според твоя бюджет.',
+  over:'Не се побира с',fits3:'В рамките на 3% от БВП',fits:'Балансиран бюджет',surplusBy:'излишък',defH:'Дефицит',over3:'над 3% от БВП',under3:'под 3% от БВП',resume:(n)=>`Зареди предишния си план (${n} ${n===1?'промяна':'промени'})`,
+  pOver:(d,p,gap,eq)=>`Държавата трябва да вземе заем за ${p} от БВП — над прага на ЕС от 3%. За да слезеш под прага: още ${gap}${eq?` (${eq})`:''}. За баланс: ${d}.`,
+  p3:(d,p)=>`${p} от БВП — под прага на ЕС от 3%, но разликата пак се взима на заем. За баланс: още ${d}.`,
+  pFit:(s)=>`Приходите покриват всички разходи и остават ${s}. Без нов заем за дефицит.`,
+  kRev:'Приходи',kSpe:'Разходи',kDef:'Дефицит, % от БВП',kDraft:'проект: 3,5%',kBal:'Излишък',
+  lgFund:'Платено с приходи',lgDebt:'Заем',lgCap:'Приходи',lg3:'3% от БВП',lgSurp:'Неизхарчено',
+  microF:'ПРИХОДИ 2027 · ',microD:'ЗАЕМ · ',
+  eqApprox:(n)=>`≈ ${n}`,eqMonths:(m,n)=>`≈ ${m} ${m===1?'месец':'месеца'} от разходите за ${n}`,eqAll:(n)=>`колкото ${n}`,
+  draft:'Проект',change:'Промяна',ofSpending:'от разходите',ofRevenue:'от приходите',ofGdp:'от БВП',
+  steps:['−10%','−1%','+1%','+10%'],remove:'Премахни',restore:'Върни',slider:'Промяна спрямо проекта',
+  lockEu:'Вноската се определя от ЕС според членството — не може да се променя едностранно.',lockInt:'Лихвите по вече поетия дълг не могат да се намалят без неизпълнение.',lockGrt:'Средствата от ЕС зависят от проектите и договорите с ЕС, не от решение в бюджета.',
+  group:'Промяната се прилага към всички отключени редове в групата.',
+  logTitle:'Твоите промени',logEmpty:'Още нищо не е променено. Избери ред вляво.',restoreAll:'Върни всичко',
+  logSum:(n,e)=>`${n} ${n===1?'промяна':'промени'} · ефект върху дефицита ${e}`,
+  removed:'премахнато',
+  sheetHint:'Промяната се отразява веднага в дефицита.',
+  dlgTitle:'Сподели бюджета си',format:'Формат',fmtWide:'Пост',fmtTall:'Портрет',fmtList:'Пълен списък',fmtHint:(k,n)=>`В този формат се виждат ${k} от ${n} промени. „Пълен списък“ ги показва всички.`,download:'Свали картинката',share:'Сподели картинката',copyLink:'Копирай линк към бюджета',
+  exportNote:'Линкът пази промените ти. Нищо не се изпраща до сървър.',copied:'Линкът е копиран',copyFail:'Копирането не успя — линкът е в адресната лента',
+  live:(p)=>`Дефицит ${p} от БВП`,
+  fSrc:'Източници',fHow:'Как се смята',fLimits:'Ограничения',
+  fSrc1:'Законопроект за държавния бюджет за 2027 г. и Актуализирана средносрочна бюджетна прогноза 2027–2029, <a href="https://www.minfin.bg/bg/1802" rel="noopener">Министерство на финансите</a>, публикувани на 6 ноември 2026 г. Проектът още не е приет от Народното събрание.',
+  fSrc2:'Разходите са по функции (табл. III-1, резервът е разпределен), приходите — по видове (раздел 1.2 и табл. II-1). Отразяване в медиите: <a href="https://www.bta.bg/bg/news/economy/1241729-ministerstvoto-na-finansite-publikuva-zakonoproekta-za-darzhavniya-byudzhet-za-2" rel="noopener">БТА</a>.',
+  fHow1:'Числата са по консолидираната фискална програма (КФП), на касова основа, в евро. Проектът: приходи 51,07 млрд. €, разходи с вноската в ЕС 55,97 млрд. €, дефицит 4,91 млрд. € — 3,5% от БВП (141,3 млрд. €).',
+  fHow2:'Всяка промяна е процент спрямо проекта. Промяна на група се прилага към всичките ѝ отключени редове. Ред „Осигуровки и други данъци“ е изчислен като разлика. Под функциите са програмите на министерствата и ведомствата, трансферите към общините и университетите от законопроекта; редът „друго“ е разликата до сумата на функцията. При данъците промяната е в ставките, а приходите следват крива на Лафер. Всеки данък има свой връх: акцизи +20% (контрабанда), осигуровки +30% (заплати „в плик“), ДДС +35% (около 27% — най-високата ставка в ЕС), данъци върху доходите и печалбата +60%, останалите +35%. На върха приходите растат с половината от увеличението, при двойно по-голямо увеличение са колкото в проекта, а след това падат, но не под 70% от проекта. Намалението на данъците намалява приходите пропорционално. МОД: ефектът при 2 400 € е оценката на Министерството на финансите; за другите нива приемаме, че колкото по-висок е таванът, толкова по-малко хора са над него.',
+  fLim1:'Правилото на ЕС за 3% се мери по европейската методология (ESA 2010), по която проектът е с дефицит 4,2%. Играта ползва касовия дефицит като приближение.',
+  fLim2:'Не се моделират икономическите ефекти: по-висок данък не означава автоматично повече приходи, а съкращенията имат последици извън бюджета.',
+  fSum:'Източници, методика и ограничения',fSumNote:'Проектобюджет 2027, Министерство на финансите, 6.11.2026',fFine:'Цветовете са вдъхновени от банкнотите на лева (1999–2025). Играта е образователна и не е свързана с държавна институция. Промените ти се пазят само в този браузър и в линка.',
+  cardTitle:'Моят бюджет 2027',cardDef:'дефицит в моя бюджет',cardDraft:'проект на правителството: 3,5%',cardNoChanges:'Без промени — бюджетът, както е предложен.',cardMore:(n)=>`и още ${n}`,
+  cardFoot:'Данни: проектобюджет 2027, Министерство на финансите, 6.11.2026 · Оправи бюджета',cardRev:'Приходи',cardSpe:'Разходи',cardChanges:'Моите промени',cardEff:'ефект върху дефицита',modUnit:'на месец',modNow:'досега 2 300 € (от 1 август 2026 г.)',modEff:'Ефект върху вноските',lafTitle:'Крива на Лафер',lafNow:(tp,rp)=>`данъци ${tp} → приходи ${rp}`,lafNote:(pk,why)=>`Над +${pk}% по-високият данък носи по-малко приходи: ${why}.`,lafWhy:{smug:'расте контрабандата',grey:'повече заплати минават „в плик“',vat:'ставката става най-високата в ЕС и укриването расте',gen:'хората и фирмите работят по-малко, крият повече или изнасят дейност'},lafMix:'Всеки данък има свой връх: акцизи +20%, осигуровки +30%, ДДС +35%, данъци върху доходите и печалбата +60%.',cardAll:(n)=>`Всички промени · ${n}`,cardSpeSide:'Разходи',cardRevSide:'Приходи',cardNet:'Общ ефект върху дефицита',cardFromTo:(a,b,p)=>`Дефицит: проект ${a} → моят бюджет ${b} (${p} от БВП)`,cardFromToFit:(a,b)=>`Дефицит: проект ${a} → моят бюджет без дефицит${b?`, излишък ${b}`:''}`,cardCut:(n)=>`Списъкът е съкратен: още ${n} промени са в линка.`,
+  cardSurplus:'излишък',
+ },
+ en:{title:'Fix the Budget',serialLab:'BG 2027',serialTip:'Plan number. It is computed from your changes: the same changes give the same number, and 0000001 is the draft with no changes. It is printed on the image too.',howBtn:'How to play',export:'Share budget',spending:'Spending',revenue:'Revenue',expand:'Show',lvl1:'Groups',lvl2:'Subgroups',lvlAll:'Everything',
+  hint:'Pick a line, then cut or raise it. Keys: ↑↓ ←→, − and +',how1h:'The budget is in the red',how1:(d)=>`The 2027 draft spends ${d} more than it brings in. That gap is covered by borrowing. The finances are in your hands, and you can fix them.`,how2h:'Go through the spending',how2:'Open the groups — pensions, health, education — all the way down to single ministries and universities. Pick a line and cut its budget, raise it or remove it, as you see fit.',how3h:'You can change taxes too',how3:'On the Revenue tab you can raise or lower taxes, and the maximum insurable income (the cap on social contributions). Careful: taxes that are too high bring in less revenue, not more.',how4h:'Share your result',how4:'When you’re done, press “Share budget” and show others the changes you want.',howGo:'Start',
+  mapTitle:'Spending map',legChanged:'changed',legLocked:'locked',legNote:'Sizes follow your budget.',
+  over:'Over by',fits3:'Within 3% of GDP',fits:'Balanced budget',surplusBy:'surplus',defH:'Deficit',over3:'above 3% of GDP',under3:'under 3% of GDP',resume:(n)=>`Load your previous plan (${n} change${n===1?'':'s'})`,
+  pOver:(d,p,gap,eq)=>`The state has to borrow ${p} of GDP — above the EU’s 3% threshold. To get under it: ${gap} more${eq?` (${eq})`:''}. To balance: ${d}.`,
+  p3:(d,p)=>`${p} of GDP — under the EU’s 3% threshold, but the gap is still borrowed. To balance: ${d} more.`,
+  pFit:(s)=>`Revenue covers all spending with ${s} left over. No new borrowing for a deficit.`,
+  kRev:'Revenue',kSpe:'Spending',kDef:'Deficit, % of GDP',kDraft:'draft: 3.5%',kBal:'Surplus',
+  lgFund:'Paid from revenue',lgDebt:'Borrowed',lgCap:'Revenue',lg3:'3% of GDP',lgSurp:'Unspent',
+  microF:'REVENUE 2027 · ',microD:'BORROWED · ',
+  eqApprox:(n)=>`≈ ${n}`,eqMonths:(m,n)=>`≈ ${m} ${m===1?'month':'months'} of ${n} spending`,eqAll:(n)=>`as much as ${n}`,
+  draft:'Draft',change:'Change',ofSpending:'of spending',ofRevenue:'of revenue',ofGdp:'of GDP',
+  steps:['−10%','−1%','+1%','+10%'],remove:'Remove',restore:'Restore',slider:'Change from the draft',
+  lockEu:'The contribution is set by the EU under membership rules — it can’t be changed unilaterally.',lockInt:'Interest on debt already taken can’t be cut without defaulting.',lockGrt:'EU funds depend on projects and agreements with the EU, not on a budget decision.',
+  group:'The change applies to every unlocked line in the group.',
+  logTitle:'Your changes',logEmpty:'Nothing changed yet. Pick a line on the left.',restoreAll:'Restore all',
+  logSum:(n,e)=>`${n} ${n===1?'change':'changes'} · effect on the deficit ${e}`,
+  removed:'removed',
+  sheetHint:'The deficit updates as you change it.',
+  dlgTitle:'Share your budget',format:'Format',fmtWide:'Post',fmtTall:'Portrait',fmtList:'Full list',fmtHint:(k,n)=>`This format shows ${k} of ${n} changes. “Full list” shows them all.`,download:'Download image',share:'Share image',copyLink:'Copy link to this budget',
+  exportNote:'The link keeps your changes. Nothing is sent to a server.',copied:'Link copied',copyFail:'Copy failed — the link is in the address bar',
+  live:(p)=>`Deficit ${p} of GDP`,
+  fSrc:'Sources',fHow:'How it’s calculated',fLimits:'Limits',
+  fSrc1:'Draft State Budget Act 2027 and the updated medium-term budget forecast 2027–2029, <a href="https://www.minfin.bg/bg/1802" rel="noopener">Ministry of Finance</a>, published 6 November 2026. Parliament has not yet adopted it.',
+  fSrc2:'Spending is by function (Table III-1, reserve distributed); revenue by type (section 1.2 and Table II-1). Press coverage: <a href="https://www.bta.bg/en/news/economy/1241611-proposed-2027-budget-sets-deficit-at-3-5-minimum-wage-at-eur-660" rel="noopener">BTA</a>.',
+  fHow1:'Figures follow the consolidated fiscal programme (cash basis, euro). The draft: revenue €51.07bn, spending including the EU contribution €55.97bn, deficit €4.91bn — 3.5% of GDP (€141.3bn).',
+  fHow2:'Every change is a percentage of the draft. A change to a group applies to all its unlocked lines. “Social contributions and other taxes” is computed as a remainder. Under each function are the ministries’ and agencies’ programmes and the transfers to municipalities and universities from the bill; the “other” line is the difference to the function total. For taxes, the change is to the rates, and revenue follows a Laffer curve. Each tax has its own peak: excise +20% (smuggling), contributions +30% (envelope wages), VAT +35% (about 27%, the EU’s highest rate), income and profit taxes +60%, the rest +35%. At the peak revenue grows by half the increase; at twice the peak it is back to the draft level, and beyond that it falls, but never below 70% of the draft. Tax cuts reduce revenue proportionally. Contribution cap: the effect at €2,400 is the Ministry of Finance estimate; for other levels we assume the higher the cap, the fewer people earn above it.',
+  fLim1:'The EU’s 3% rule is measured under ESA 2010, where the draft’s deficit is 4.2%. The game uses the cash deficit as an approximation.',
+  fLim2:'Economic effects aren’t modelled: a higher tax doesn’t automatically raise more revenue, and cuts have consequences beyond the budget.',
+  fSum:'Sources, method and limits',fSumNote:'Draft budget 2027, Ministry of Finance, 6 Nov 2026',fFine:'Colours are inspired by the lev banknotes (1999–2025). This is an educational game, not affiliated with any public institution. Your changes are kept only in this browser and in the link.',
+  cardTitle:'My budget 2027',cardDef:'deficit in my budget',cardDraft:'government draft: 3.5%',cardNoChanges:'No changes — the budget as proposed.',cardMore:(n)=>`and ${n} more`,
+  cardFoot:'Data: draft budget 2027, Ministry of Finance, 6 Nov 2026 · Fix the Budget',cardRev:'Revenue',cardSpe:'Spending',cardChanges:'My changes',cardEff:'effect on deficit',modUnit:'a month',modNow:'currently €2,300 (since 1 August 2026)',modEff:'Effect on contributions',lafTitle:'Laffer curve',lafNow:(tp,rp)=>`taxes ${tp} → revenue ${rp}`,lafNote:(pk,why)=>`Above +${pk}%, a higher tax brings in less: ${why}.`,lafWhy:{smug:'smuggling grows',grey:'more pay moves into cash envelopes',vat:'the rate becomes the EU’s highest and evasion grows',gen:'people and firms work less, hide more or move activity elsewhere'},lafMix:'Each tax has its own peak: excise +20%, contributions +30%, VAT +35%, income and profit taxes +60%.',cardAll:(n)=>`All changes · ${n}`,cardSpeSide:'Spending',cardRevSide:'Revenue',cardNet:'Net effect on the deficit',cardFromTo:(a,b,p)=>`Deficit: draft ${a} → my budget ${b} (${p} of GDP)`,cardFromToFit:(a,b)=>`Deficit: draft ${a} → my budget has none${b?`, surplus ${b}`:''}`,cardCut:(n)=>`List shortened: ${n} more changes are in the link.`,
+  cardSurplus:'surplus',
+ }
+};
+
+/* ===================== DEEP LINES =====================
+   Programmes and named recipients from the draft State Budget Act 2027 (6 Nov 2026), municipal delegated
+   activities (Art. 53), NOI/NZOK ceilings (forecast Annex 4). Every listed line
+   fits inside its official function total, and the "other" line is the computed difference. */
+const DEEP = {"pen":[{"id":"pen_noi","bg":"Пенсии от НОИ","en":"State social security pensions (NOI)","v":14668.2301,"src":{"bg":"АСБП 2027–2029, прил. 4 (тавани по бюджетни организации); презентация на МФ, 6.11.2026","en":"Medium-term forecast 2027–2029, Annex 4 (spending ceilings); MoF presentation, 6 Nov 2026"},"f":{"bg":["Пенсиите се осъвременяват със 7,8% от 1 юли 2027 г. по „швейцарското правило“ — 552,6 млн. €.","Разходите на ДОО за пенсии растат с 1 164,3 млн. € спрямо 2026 г.","Разбивката по видове пенсии ще е в бюджета на ДОО, който още не е публикуван."],"en":["Pensions rise by 7.8% from 1 July 2027 under the “Swiss rule” — €552.6m.","Social-security spending on pensions grows by €1,164.3m on 2026.","The split by type of pension will be in the social-security budget, not yet published."]}},{"id":"pen_ucf","bg":"Учителски пенсионен фонд","en":"Teachers’ Pension Fund","v":87.1432,"src":{"bg":"АСБП 2027–2029, прил. 4 (тавани по бюджетни организации); презентация на МФ, 6.11.2026","en":"Medium-term forecast 2027–2029, Annex 4 (spending ceilings); MoF presentation, 6 Nov 2026"},"f":{"bg":["Вноската за Учителския пенсионен фонд остава 4,3%."],"en":["The contribution to the Teachers’ Pension Fund stays at 4.3%."]}}],"ben":[{"id":"ben_doo","bg":"Обезщетения от ДОО (болест, майчинство, безработица)","en":"Social-security benefits (sickness, maternity, unemployment)","v":1744.9,"src":{"bg":"Презентация на МФ за проектобюджет 2027, 6.11.2026","en":"MoF presentation of the draft 2027 budget, 6 Nov 2026"},"f":{"bg":["Минималното обезщетение за безработица става 13,00 € на ден (от 9,21) — 16,8 млн. €.","Майчинството през втората година става 450 € — 26,4 млн. €."],"en":["The minimum unemployment benefit rises to €13.00 a day (from €9.21) — €16.8m.","Maternity pay in the second year rises to €450 — €26.4m."]}},{"id":"ben_inc","bg":"Социално включване (МТСП)","en":"Social inclusion (Labour ministry)","v":494.5774,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 14, ал. 2","en":"Draft State Budget Act 2027, Art. 14, ал. 2"},"f":{"bg":["Помощите за деца (9 от 12 вида) се увеличават — 72,5 млн. €."],"en":["Child benefits (9 of 12 kinds) go up — €72.5m."]}},{"id":"ben_ast","bg":"Социално подпомагане (МТСП)","en":"Social assistance (Labour ministry)","v":288.1419,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 14, ал. 2","en":"Draft State Budget Act 2027, Art. 14, ал. 2"},"f":{"bg":["Линията на бедност става 443 € — +114,3 млн. €.","Помощта за отопление се увеличава с 79,4 млн. €."],"en":["The poverty line rises to €443 — +€114.3m.","Heating aid goes up by €79.4m."]}}],"prg":[{"id":"prg_dis","bg":"Хора с увреждания (МТСП)","en":"People with disabilities (Labour ministry)","v":1460.3752,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 14, ал. 2","en":"Draft State Budget Act 2027, Art. 14, ал. 2"},"f":{"bg":["Включва личната помощ и помощите за хора с увреждания.","Реформа в ТЕЛК и контрол на личната помощ спестяват 228,3 млн. €.","По-високата линия на бедност струва тук 95,9 млн. €."],"en":["Includes personal assistance and disability allowances.","Reform of disability assessment and checks on personal assistance save €228.3m.","The higher poverty line costs €95.9m here."]}},{"id":"prg_mun","bg":"Социални услуги в общините (делегирани)","en":"Municipal social services (delegated)","v":649.3699,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 53","en":"Draft State Budget Act 2027, Art. 53"}},{"id":"prg_lab","bg":"Пазар на труда (МТСП)","en":"Labour market (Labour ministry)","v":86.086,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 14, ал. 2","en":"Draft State Budget Act 2027, Art. 14, ал. 2"}},{"id":"prg_rel","bg":"Трудови отношения (МТСП)","en":"Labour relations (Labour ministry)","v":18.7045,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 14, ал. 2","en":"Draft State Budget Act 2027, Art. 14, ал. 2"}},{"id":"prg_adm","bg":"Администрация на МТСП","en":"Labour ministry administration","v":9.0897,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 14, ал. 2","en":"Draft State Budget Act 2027, Art. 14, ал. 2"}},{"id":"prg_asy","bg":"Убежище и бежанци","en":"Asylum and refugees","v":6.692,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 6, ал. 2","en":"Draft State Budget Act 2027, Art. 6, ал. 2"}},{"id":"prg_dem","bg":"Демография и социални инвестиции (МТСП)","en":"Demography and social investment (Labour ministry)","v":0.7314,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 14, ал. 2","en":"Draft State Budget Act 2027, Art. 14, ал. 2"}}],"hea":[{"id":"hea_nzok","bg":"Здравноосигурителна каса (НЗОК)","en":"National Health Insurance Fund (NZOK)","kids":[{"id":"hea_nzp","bg":"Плащания за лечение (НЗОК)","en":"Health insurance payments (NZOK)","v":5411.2,"src":{"bg":"АСБП 2027–2029, прил. 4 (тавани по бюджетни организации); презентация на МФ, 6.11.2026","en":"Medium-term forecast 2027–2029, Annex 4 (spending ceilings); MoF presentation, 6 Nov 2026"},"f":{"bg":["Болнична и извънболнична помощ, лекарства, дентална помощ. Разбивката ще е в бюджета на НЗОК, който още не е публикуван.","НЗОК получава допълнително 493,0 млн. €; мерки за оптимизация спестяват 68,7 млн. €."],"en":["Hospital and outpatient care, medicines, dental care. The split will be in the NZOK budget, not yet published.","NZOK gets an extra €493.0m; efficiency measures save €68.7m."]}},{"id":"hea_nzr","bg":"Резерв на НЗОК","en":"NZOK contingency reserve","v":169.1,"src":{"bg":"АСБП 2027–2029, прил. 4 (тавани по бюджетни организации); презентация на МФ, 6.11.2026","en":"Medium-term forecast 2027–2029, Annex 4 (spending ceilings); MoF presentation, 6 Nov 2026"}},{"id":"hea_nzo","bg":"Други разходи на НЗОК","en":"Other NZOK spending","v":103.2868,"src":{"bg":"АСБП 2027–2029, прил. 4 (тавани по бюджетни организации); презентация на МФ, 6.11.2026","en":"Medium-term forecast 2027–2029, Annex 4 (spending ceilings); MoF presentation, 6 Nov 2026"},"f":{"bg":["Изчислено: таван на НЗОК 5 683,6 млн. € минус плащанията и резерва."],"en":["Computed: the NZOK ceiling of €5,683.6m minus payments and the reserve."]}}],"src":{"bg":"АСБП 2027–2029, прил. 4 (тавани по бюджетни организации); презентация на МФ, 6.11.2026","en":"Medium-term forecast 2027–2029, Annex 4 (spending ceilings); MoF presentation, 6 Nov 2026"}},{"id":"hea_moh","bg":"Министерство на здравеопазването","en":"Ministry of Health","kids":[{"id":"hea_dx","bg":"Диагностика и лечение (МЗ)","en":"Diagnosis and treatment (Health ministry)","v":590.2643},{"id":"hea_pub","bg":"Обществено здраве и профилактика","en":"Public health and prevention","v":86.0418},{"id":"hea_med","bg":"Лекарства и медицински изделия (МЗ)","en":"Medicines and medical devices (Health ministry)","v":25.7939},{"id":"hea_adm","bg":"Администрация на МЗ","en":"Health ministry administration","v":22.8487}],"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 15, ал. 2","en":"Draft State Budget Act 2027, Art. 15, ал. 2"}},{"id":"hea_mun","bg":"Здравеопазване в общините (делегирано)","en":"Municipal health services (delegated)","v":210.7348,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 53","en":"Draft State Budget Act 2027, Art. 53"},"f":{"bg":["Здравни кабинети в училищата, детски ясли и други общински здравни дейности."],"en":["School health offices, crèches and other municipal health services."]}}],"def":[{"id":"def_cap","bg":"Отбранителни способности (МО)","en":"Defence capabilities (Defence ministry)","v":2884.0471,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 11, ал. 2","en":"Draft State Budget Act 2027, Art. 11, ал. 2"},"f":{"bg":["Бюджетът на МО е 2 987,0 млн. € в две програми; „Съюзна и международна сигурност“ е 103,0 млн. €."],"en":["The Defence ministry budget is €2,987.0m in two programmes; “Allied and international security” is €103.0m."]}}],"pol":[{"id":"pol_mvr","bg":"Министерство на вътрешните работи","en":"Ministry of Interior","kids":[{"id":"pol_crime","bg":"Престъпност и обществен ред (МВР)","en":"Crime and public order (Interior ministry)","v":1211.7411},{"id":"pol_fire","bg":"Пожарна безопасност и защита на населението","en":"Fire safety and civil protection","v":351.9752},{"id":"pol_brd","bg":"Граници и миграция","en":"Borders and migration","v":339.6746},{"id":"pol_mgt","bg":"Управление на МВР","en":"Interior ministry management","v":201.4334}],"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 12, ал. 2","en":"Draft State Budget Act 2027, Art. 12, ал. 2"}},{"id":"pol_sec","bg":"Служби за сигурност","en":"Security services","kids":[{"id":"pol_dans","bg":"ДАНС","en":"State Agency for National Security (DANS)","v":131.9178,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 27","en":"Draft State Budget Act 2027, Art. 27"}},{"id":"pol_dato","bg":"Държавна агенция „Технически операции“","en":"State Agency for Technical Operations","v":71.1969,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 48","en":"Draft State Budget Act 2027, Art. 48"}},{"id":"pol_nso","bg":"Национална служба за охрана","en":"National Protection Service","v":45.9509,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 33","en":"Draft State Budget Act 2027, Art. 33"}},{"id":"pol_dar","bg":"Държавна агенция „Разузнаване“","en":"State Intelligence Agency","v":33.8318,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 34","en":"Draft State Budget Act 2027, Art. 34"}},{"id":"pol_dksi","bg":"Комисия по сигурността на информацията","en":"State Commission on Information Security","v":10.5569,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 41","en":"Draft State Budget Act 2027, Art. 41"}},{"id":"pol_nb","bg":"Бюро за контрол на СРС","en":"Bureau for Control of Special Intelligence Means","v":1.1675,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 47","en":"Draft State Budget Act 2027, Art. 47"}}]},{"id":"pol_ac","bg":"Антикорупция","en":"Anti-corruption","kids":[{"id":"pol_kpk","bg":"Комисия за противодействие на корупцията","en":"Anti-Corruption Commission","v":12.957,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 32","en":"Draft State Budget Act 2027, Art. 32"}},{"id":"pol_konpi","bg":"Комисия за отнемане на незаконно имущество","en":"Illegal Assets Forfeiture Commission","v":7.7603,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 31","en":"Draft State Budget Act 2027, Art. 31"}}]},{"id":"pol_mun","bg":"Сигурност в общините (делегирано)","en":"Municipal security tasks (delegated)","v":51.8322,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 53","en":"Draft State Budget Act 2027, Art. 53"}}],"jud":[{"id":"jud_sv","bg":"Съдебна власт","en":"Judiciary","kids":[{"id":"jud_crt","bg":"Съдилища","en":"Courts","v":422.3882},{"id":"jud_pro","bg":"Прокуратура","en":"Prosecution","v":267.333},{"id":"jud_mgt","bg":"Управление на съдебната власт (ВСС)","en":"Judicial administration (Supreme Judicial Council)","v":50.6369},{"id":"jud_e","bg":"Електронно правосъдие","en":"E-justice","v":8.2123},{"id":"jud_trn","bg":"Обучение на магистрати","en":"Training of magistrates","v":3.6136}],"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 2, ал. 2","en":"Draft State Budget Act 2027, Art. 2, ал. 2"},"f":{"bg":["В законопроекта бюджетът на съдебната власт е 752,2 млн. €; Висшият съдебен съвет предлага 868,1 млн. €."],"en":["The bill gives the judiciary €752.2m; the Supreme Judicial Council proposed €868.1m."]}}],"pri":[{"id":"pri_ex","bg":"Изпълнение на наказанията (МП)","en":"Execution of sentences (Justice ministry)","v":226.5576,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 13, ал. 2","en":"Draft State Budget Act 2027, Art. 13, ал. 2"}}],"edu":[{"id":"edu_mun","bg":"Училища и детски градини в общините (делегирано)","en":"Municipal schools and kindergartens (delegated)","v":3103.9448,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 53","en":"Draft State Budget Act 2027, Art. 53"},"f":{"bg":["Заплатите на педагогическите специалисти растат със 7,5% от 1 януари."],"en":["Teachers’ pay rises by 7.5% from 1 January."]}},{"id":"edu_mon","bg":"Министерство на образованието и науката","en":"Ministry of Education and Science","kids":[{"id":"edu_sch","bg":"Предучилищно и училищно образование (МОН)","en":"Pre-school and school education (Education ministry)","v":794.9729},{"id":"edu_hi","bg":"Висше образование и наука (МОН)","en":"Higher education and research (Education ministry)","v":116.3248},{"id":"edu_adm","bg":"Администрация на МОН","en":"Education ministry administration","v":6.9557}],"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 16, ал. 2","en":"Draft State Budget Act 2027, Art. 16, ал. 2"}},{"id":"edu_uni","bg":"Държавни университети","en":"State universities","kids":[{"id":"edu_u01","bg":"Технически университет – София","en":"Technical University of Sofia","v":83.7141,"pn":1},{"id":"edu_u02","bg":"Технически университет – Варна","en":"Technical University of Varna","v":16.6362,"pn":1},{"id":"edu_u03","bg":"Технически университет – Габрово","en":"Technical University of Gabrovo","v":7.655,"pn":1},{"id":"edu_u04","bg":"Русенски университет „Ангел Кънчев“","en":"University of Ruse Angel Kanchev","v":22.3972,"pn":1},{"id":"edu_u05","bg":"Университет по хранителни технологии – Пловдив","en":"University of Food Technologies, Plovdiv","v":9.3082,"pn":1},{"id":"edu_u06","bg":"Химикотехнологичен и металургичен университет – София","en":"University of Chemical Technology and Metallurgy, Sofia","v":11.3866,"pn":1},{"id":"edu_u07","bg":"Бургаски държавен университет „Проф. д-р Асен Златаров“","en":"Burgas State University Prof. Dr Asen Zlatarov","v":8.9633,"pn":1},{"id":"edu_u08","bg":"Лесотехнически университет – София","en":"University of Forestry, Sofia","v":11.3644,"pn":1},{"id":"edu_u09","bg":"Университет по архитектура, строителство и геодезия – София","en":"University of Architecture, Civil Engineering and Geodesy, Sofia","v":26.0028,"pn":1},{"id":"edu_u10","bg":"Минно-геоложки университет „Св. Иван Рилски“ – София","en":"University of Mining and Geology St Ivan Rilski, Sofia","v":6.6151,"pn":1},{"id":"edu_u11","bg":"Университет за национално и световно стопанство – София","en":"University of National and World Economy, Sofia","v":37.4017,"pn":1},{"id":"edu_u12","bg":"Икономически университет – Варна","en":"University of Economics, Varna","v":10.7424,"pn":1},{"id":"edu_u13","bg":"Стопанска академия „Димитър А. Ценов“ – Свищов","en":"D. A. Tsenov Academy of Economics, Svishtov","v":7.2767,"pn":1},{"id":"edu_u14","bg":"Софийски университет „Св. Климент Охридски“","en":"Sofia University St Kliment Ohridski","v":115.8557,"pn":1},{"id":"edu_u15","bg":"Великотърновски университет „Св. св. Кирил и Методий“","en":"University of Veliko Tarnovo Sts Cyril and Methodius","v":20.4864,"pn":1},{"id":"edu_u16","bg":"Пловдивски университет „Паисий Хилендарски“","en":"Plovdiv University Paisii Hilendarski","v":41.4243,"pn":1},{"id":"edu_u17","bg":"Югозападен университет „Неофит Рилски“ – Благоевград","en":"South-West University Neofit Rilski, Blagoevgrad","v":20.1386,"pn":1},{"id":"edu_u18","bg":"Шуменски университет „Епископ Константин Преславски“","en":"Shumen University Bishop Konstantin Preslavski","v":14.3954,"pn":1},{"id":"edu_u19","bg":"Национална спортна академия „Васил Левски“ – София","en":"National Sports Academy Vassil Levski, Sofia","v":22.3935,"pn":1},{"id":"edu_u20","bg":"Аграрен университет – Пловдив","en":"Agricultural University, Plovdiv","v":9.6806,"pn":1},{"id":"edu_u21","bg":"Академия за музикално, танцово и изобразително изкуство „Проф. Асен Диамандиев“ – Пловдив","en":"Academy of Music, Dance and Fine Arts Prof. Asen Diamandiev, Plovdiv","v":4.7668,"pn":1},{"id":"edu_u22","bg":"Национална академия за театрално и филмово изкуство „Кръстьо Сарафов“ – София","en":"National Academy for Theatre and Film Arts Krastyo Sarafov, Sofia","v":6.6115,"pn":1},{"id":"edu_u23","bg":"Национална музикална академия „Проф. Панчо Владигеров“ – София","en":"National Academy of Music Prof. Pancho Vladigerov, Sofia","v":8.2559,"pn":1},{"id":"edu_u24","bg":"Национална художествена академия – София","en":"National Academy of Arts, Sofia","v":8.884,"pn":1},{"id":"edu_u25","bg":"Университет по библиотекознание и информационни технологии – София","en":"University of Library Studies and Information Technologies, Sofia","v":5.8515,"pn":1},{"id":"edu_u26","bg":"Висше училище по телекомуникации и пощи – София","en":"University of Telecommunications and Post, Sofia","v":4.2539,"pn":1},{"id":"edu_u27","bg":"Медицински университет – София","en":"Medical University of Sofia","v":45.508,"pn":1},{"id":"edu_u28","bg":"Медицински университет „Проф. д-р Параскев Стоянов“ – Варна","en":"Medical University of Varna Prof. Dr Paraskev Stoyanov","v":34.4531,"pn":1},{"id":"edu_u29","bg":"Медицински университет – Пловдив","en":"Medical University of Plovdiv","v":30.8182,"pn":1},{"id":"edu_u30","bg":"Медицински университет – Плевен","en":"Medical University of Pleven","v":13.2144,"pn":1},{"id":"edu_u31","bg":"Тракийски университет – Стара Загора","en":"Trakia University, Stara Zagora","v":31.1191,"pn":1},{"id":"edu_u32","bg":"Висше транспортно училище „Тодор Каблешков“ – София","en":"Todor Kableshkov University of Transport, Sofia","v":3.5648,"pn":1},{"id":"edu_u33","bg":"Висше строително училище „Любен Каравелов“ – София","en":"Lyuben Karavelov University of Civil Engineering, Sofia","v":1.5912,"pn":1}],"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 16, ал. 4","en":"Draft State Budget Act 2027, Art. 16, ал. 4"}},{"id":"edu_mil","bg":"Военни висши училища","en":"Military universities","kids":[{"id":"edu_m1","bg":"Военна академия „Георги Стойков Раковски“","en":"Rakovski National Defence College","v":9.5384,"pn":1},{"id":"edu_m2","bg":"Национален военен университет „Васил Левски“","en":"Vasil Levski National Military University","v":20.3184,"pn":1},{"id":"edu_m3","bg":"Висше военноморско училище „Никола Йонков Вапцаров“","en":"Nikola Vaptsarov Naval Academy","v":10.3571,"pn":1},{"id":"edu_m4","bg":"Висше военновъздушно училище „Георги Бенковски“","en":"Georgi Benkovski Air Force Academy","v":6.7396,"pn":1}],"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 11","en":"Draft State Budget Act 2027, Art. 11"}}],"sci":[{"id":"sci_ban","bg":"Българска академия на науките","en":"Bulgarian Academy of Sciences","v":140.3235,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 16, ал. 4","en":"Draft State Budget Act 2027, Art. 16, ал. 4"},"pn":1},{"id":"sci_sa","bg":"Селскостопанска академия","en":"Agricultural Academy","v":46.2799,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 24","en":"Draft State Budget Act 2027, Art. 24"},"pn":1}],"trn":[{"id":"trn_road","bg":"Пътища и техническа инфраструктура (МРРБ)","en":"Roads and technical infrastructure (Regional ministry)","v":1186.1037,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 23, ал. 2","en":"Draft State Budget Act 2027, Art. 23, ал. 2"},"f":{"bg":["Изграждане, поддържане и модернизация на пътната мрежа."],"en":["Building, maintaining and upgrading the road network."]}},{"id":"trn_mtc","bg":"Министерство на транспорта и съобщенията","en":"Ministry of Transport and Communications","kids":[{"id":"trn_tr","bg":"Транспорт (МТС)","en":"Transport (Transport ministry)","v":498.5768,"f":{"bg":["В т.ч. субсидии за НК „Железопътна инфраструктура“ (294,7 млн. €), БДЖ (123,1 млн. €) и пристанищата (11,2 млн. €)."],"en":["Includes subsidies to the National Railway Infrastructure Company (€294.7m), BDZ (€123.1m) and ports (€11.2m)."]}},{"id":"trn_com","bg":"Съобщения и цифрова свързаност (МТС)","en":"Communications and digital connectivity (Transport ministry)","v":59.1299,"f":{"bg":["В т.ч. субсидия за „Български пощи“ — 57,9 млн. €."],"en":["Includes a subsidy to Bulgarian Posts — €57.9m."]}},{"id":"trn_adm","bg":"Администрация и експертиза (МТС)","en":"Administration and medical assessment (Transport ministry)","v":18.276}],"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 25, ал. 2","en":"Draft State Budget Act 2027, Art. 25, ал. 2"}},{"id":"trn_bus","bg":"Автобусни линии и намалени цени на билетите","en":"Loss-making bus lines and reduced fares","kids":[{"id":"trn_bus1","bg":"Субсидии за нерентабилни автобусни линии","en":"Subsidies for loss-making bus lines","v":149.9},{"id":"trn_bus2","bg":"Компенсации за намалени цени на билетите","en":"Compensation for reduced fares","v":127.7697}],"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 51","en":"Draft State Budget Act 2027, Art. 51"}},{"id":"trn_snow","bg":"Зимно поддържане на общинските пътища","en":"Winter maintenance of municipal roads","v":25.1,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 52","en":"Draft State Budget Act 2027, Art. 52"}},{"id":"trn_crc","bg":"Комисия за регулиране на съобщенията","en":"Communications Regulation Commission","v":14.1247,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 37","en":"Draft State Budget Act 2027, Art. 37"}}],"enr":[{"id":"enr_fses","bg":"Фонд „Сигурност на електроенергийната система“","en":"Electricity System Security Fund","kids":[{"id":"enr_comp","bg":"Компенсации за цената на тока","en":"Electricity price compensation","v":634.9},{"id":"enr_fo","bg":"Други разходи на фонда","en":"Other fund spending","v":721.4429}],"src":{"bg":"АСБП 2027–2029, мотиви (КФП)","en":"Medium-term forecast 2027–2029, notes (consolidated programme)"}},{"id":"enr_me","bg":"Министерство на енергетиката","en":"Ministry of Energy","v":41.401,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 21","en":"Draft State Budget Act 2027, Art. 21"}},{"id":"enr_oil","bg":"Запаси от нефт и нефтопродукти","en":"Emergency oil stocks","v":8.3042,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 42, ал. 2","en":"Draft State Budget Act 2027, Art. 42, ал. 2"}},{"id":"enr_nra","bg":"Агенция за ядрено регулиране","en":"Nuclear Regulatory Agency","v":7.7544,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 40","en":"Draft State Budget Act 2027, Art. 40"}},{"id":"enr_kevr","bg":"Регулатор за енергетика и води (КЕВР)","en":"Energy and Water Regulatory Commission","v":7.5999,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 39","en":"Draft State Budget Act 2027, Art. 39"}}],"agr":[{"id":"agr_dfz","bg":"ДФ „Земеделие“","en":"State Fund Agriculture","kids":[{"id":"agr_dfz1","bg":"Земеделие и селски райони (ДФЗ)","en":"Agriculture and rural areas (State Fund Agriculture)","v":257.8535},{"id":"agr_dfz3","bg":"Администрация на ДФЗ","en":"State Fund Agriculture administration","v":18.4412},{"id":"agr_dfz2","bg":"Рибарство (ДФЗ)","en":"Fisheries (State Fund Agriculture)","v":0.2654}],"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 46, ал. 2","en":"Draft State Budget Act 2027, Art. 46, ал. 2"}},{"id":"agr_mzh","bg":"Министерство на земеделието и храните","en":"Ministry of Agriculture and Food","kids":[{"id":"agr_m1","bg":"Земеделие и селски райони (МЗХ)","en":"Agriculture and rural areas (Agriculture ministry)","v":150.7334},{"id":"agr_m3","bg":"Гори и дивеч","en":"Forests and game","v":26.5208},{"id":"agr_m4","bg":"Администрация на МЗХ","en":"Agriculture ministry administration","v":18.2396},{"id":"agr_m2","bg":"Рибарство и аквакултури","en":"Fisheries and aquaculture","v":5.261}],"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 24, ал. 2","en":"Draft State Budget Act 2027, Art. 24, ал. 2"}}],"oec":[{"id":"oec_miii","bg":"Министерство на икономиката","en":"Ministry of Economy","kids":[{"id":"oec_m1","bg":"Икономическо развитие и конкурентоспособност","en":"Economic development and competitiveness","v":57.3483},{"id":"oec_m2","bg":"Външноикономическо сътрудничество","en":"External economic cooperation","v":7.8804},{"id":"oec_m3","bg":"Администрация на МИИИ","en":"Economy ministry administration","v":6.9089}],"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 19, ал. 2","en":"Draft State Budget Act 2027, Art. 19, ал. 2"}},{"id":"oec_res","bg":"Държавен резерв и военновременни запаси","en":"State reserves and wartime stocks","v":38.4293,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 42, ал. 2","en":"Draft State Budget Act 2027, Art. 42, ал. 2"}},{"id":"oec_inn","bg":"Иновации (МИДТ)","en":"Innovation (Digital ministry)","v":17.2581,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 20, ал. 2","en":"Draft State Budget Act 2027, Art. 20, ал. 2"}},{"id":"oec_kfn","bg":"Комисия за финансов надзор","en":"Financial Supervision Commission","v":15.746,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 43","en":"Draft State Budget Act 2027, Art. 43"}},{"id":"oec_kzk","bg":"Комисия за защита на конкуренцията","en":"Commission for Protection of Competition","v":5.3459,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 36","en":"Draft State Budget Act 2027, Art. 36"}},{"id":"oec_kpnro","bg":"Надзор над одиторите","en":"Oversight of registered auditors","v":1.4899,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 44","en":"Draft State Budget Act 2027, Art. 44"}},{"id":"oec_mun","bg":"Икономически дейности в общините (делегирани)","en":"Municipal economic services (delegated)","v":2.2924,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 53","en":"Draft State Budget Act 2027, Art. 53"}}],"tur":[{"id":"tur_mt","bg":"Министерство на туризма","en":"Ministry of Tourism","v":23.8585,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 22","en":"Draft State Budget Act 2027, Art. 22"}}],"exe":[{"id":"exe_mun","bg":"Общинска администрация (делегирано)","en":"Municipal administration (delegated)","kids":[{"id":"exe_mun2","bg":"Служители в общинската администрация","en":"Municipal administration staff","v":362.9183},{"id":"exe_mun1","bg":"Кметове и кметски наместници","en":"Mayors and deputy village mayors","v":78.5296}],"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 53","en":"Draft State Budget Act 2027, Art. 53"}},{"id":"exe_mf","bg":"Министерство на финансите","en":"Ministry of Finance","kids":[{"id":"exe_mf2","bg":"Събиране на приходите (НАП и Митници)","en":"Revenue collection (tax and customs agencies)","v":314.5397},{"id":"exe_mf1","bg":"Публични финанси (МФ)","en":"Public finances (Finance ministry)","v":56.5037},{"id":"exe_mf3","bg":"Борба с измамите и контрабандата","en":"Fighting fraud and smuggling","v":45.2824},{"id":"exe_mf5","bg":"Администрация на МФ","en":"Finance ministry administration","v":22.4707},{"id":"exe_mf4","bg":"Управление на дълга","en":"Debt management","v":4.0252}],"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 9, ал. 2","en":"Draft State Budget Act 2027, Art. 9, ал. 2"}},{"id":"exe_mvnr","bg":"Министерство на външните работи","en":"Ministry of Foreign Affairs","kids":[{"id":"exe_mv1","bg":"Дипломация","en":"Diplomacy","v":144.2606},{"id":"exe_mv2","bg":"Публична дипломация","en":"Public diplomacy","v":0.9845},{"id":"exe_mv3","bg":"Българските общности в чужбина","en":"Bulgarian communities abroad","v":0.8404}],"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 10, ал. 2","en":"Draft State Budget Act 2027, Art. 10, ал. 2"}},{"id":"exe_ns","bg":"Народно събрание","en":"National Assembly","kids":[{"id":"exe_ns1","bg":"Работа на парламента","en":"Running Parliament","v":42.712},{"id":"exe_ns2","bg":"Обслужване на парламента","en":"Parliament support services","v":24.8808},{"id":"exe_ns3","bg":"Икономически и социален съвет","en":"Economic and Social Council","v":1.587},{"id":"exe_ns4","bg":"Фискален съвет","en":"Fiscal Council","v":0.4772}],"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 3, ал. 2","en":"Draft State Budget Act 2027, Art. 3, ал. 2"}},{"id":"exe_ms","bg":"Министерски съвет и областни управи","en":"Council of Ministers and regional governors","kids":[{"id":"exe_ms3","bg":"Областни управи","en":"Regional governors","v":28.337},{"id":"exe_ms1","bg":"Министерски съвет","en":"Council of Ministers","v":11.7575},{"id":"exe_ms5","bg":"Администрация на МС","en":"Council of Ministers administration","v":8.6287},{"id":"exe_ms2","bg":"Управление на средствата от ЕС","en":"Managing EU funds","v":0.3015}],"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 6, ал. 2","en":"Draft State Budget Act 2027, Art. 6, ал. 2"}},{"id":"exe_ind","bg":"Контролни и независими органи","en":"Oversight and independent bodies","kids":[{"id":"exe_sp","bg":"Сметна палата","en":"National Audit Office","v":17.4362,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 4","en":"Draft State Budget Act 2027, Art. 4"}},{"id":"exe_ks","bg":"Конституционен съд","en":"Constitutional Court","v":9.9916,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 7","en":"Draft State Budget Act 2027, Art. 7"}},{"id":"exe_pr","bg":"Администрация на президента","en":"Presidential Administration","v":6.6235,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 5","en":"Draft State Budget Act 2027, Art. 5"}},{"id":"exe_cik","bg":"Централна избирателна комисия","en":"Central Election Commission","v":3.9724,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 45","en":"Draft State Budget Act 2027, Art. 45"}},{"id":"exe_kzld","bg":"Комисия за защита на личните данни","en":"Personal Data Protection Commission","v":3.7276,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 30","en":"Draft State Budget Act 2027, Art. 30"}},{"id":"exe_omb","bg":"Омбудсман","en":"Ombudsman","v":2.7474,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 8","en":"Draft State Budget Act 2027, Art. 8"}},{"id":"exe_kzd","bg":"Комисия за защита от дискриминация","en":"Commission for Protection against Discrimination","v":2.4683,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 29","en":"Draft State Budget Act 2027, Art. 29"}}]}],"gsv":[{"id":"gsv_nsi","bg":"Национален статистически институт","en":"National Statistical Institute","v":23.5345,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 35","en":"Draft State Budget Act 2027, Art. 35"}},{"id":"gsv_dig","bg":"Дигитализация на администрацията (МИДТ)","en":"Digital government (Digital ministry)","v":21.7499,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 20, ал. 2","en":"Draft State Budget Act 2027, Art. 20, ал. 2"}},{"id":"gsv_arc","bg":"Държавни архиви","en":"State archives","v":8.1432,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 6, ал. 2","en":"Draft State Budget Act 2027, Art. 6, ал. 2"}},{"id":"gsv_dos","bg":"Комисия по досиетата","en":"State Security Files Commission","v":1.8333,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 28","en":"Draft State Budget Act 2027, Art. 28"}}],"ecl":[{"id":"ecl_mosv","bg":"Министерство на околната среда и водите","en":"Ministry of Environment and Water","kids":[{"id":"ecl_m1","bg":"Опазване на околната среда","en":"Protecting the environment","v":30.3724},{"id":"ecl_m3","bg":"Метеорология и хидрология","en":"Meteorology and hydrology","v":20.9356},{"id":"ecl_m4","bg":"Администрация на МОСВ","en":"Environment ministry administration","v":16.5872},{"id":"ecl_m2","bg":"Мониторинг на околната среда","en":"Environmental monitoring","v":10.3771}],"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 18, ал. 2","en":"Draft State Budget Act 2027, Art. 18, ал. 2"}}],"cuc":[{"id":"cuc_mk","bg":"Министерство на културата","en":"Ministry of Culture","kids":[{"id":"cuc_m2","bg":"Съвременно изкуство и художествено образование","en":"Contemporary arts and arts education","v":253.3971},{"id":"cuc_m1","bg":"Културно наследство","en":"Cultural heritage","v":28.547},{"id":"cuc_m3","bg":"Администрация на МК","en":"Culture ministry administration","v":3.7807}],"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 17, ал. 2","en":"Draft State Budget Act 2027, Art. 17, ал. 2"}},{"id":"cuc_mun","bg":"Читалища, музеи и библиотеки в общините (делегирано)","en":"Municipal cultural centres, museums and libraries (delegated)","v":166.7593,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 53","en":"Draft State Budget Act 2027, Art. 53"}},{"id":"cuc_med","bg":"Обществени медии","en":"Public media","kids":[{"id":"cuc_bnt","bg":"Българска национална телевизия","en":"Bulgarian National Television","v":51.1459,"pn":1},{"id":"cuc_bnr","bg":"Българско национално радио","en":"Bulgarian National Radio","v":38.4493,"pn":1},{"id":"cuc_bta","bg":"Българска телеграфна агенция","en":"Bulgarian News Agency","v":8.6884,"pn":1}],"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 49","en":"Draft State Budget Act 2027, Art. 49"}},{"id":"cuc_sem","bg":"Съвет за електронни медии","en":"Council for Electronic Media","v":2.0583,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 38","en":"Draft State Budget Act 2027, Art. 38"}}],"spo":[{"id":"spo_mms","bg":"Министерство на младежта и спорта","en":"Ministry of Youth and Sports","kids":[{"id":"spo_m2","bg":"Спорт за високи постижения","en":"Elite sport","v":69.8233},{"id":"spo_m1","bg":"Спорт за учащи и в свободното време","en":"School and leisure sport","v":20.4639},{"id":"spo_m3","bg":"Спортни обекти","en":"Sports facilities","v":8.3603},{"id":"spo_m5","bg":"Младежки политики","en":"Youth policy","v":5.8541},{"id":"spo_m6","bg":"Администрация на ММС","en":"Sports ministry administration","v":2.1837},{"id":"spo_m4","bg":"Международни практики в спорта","en":"International good practice in sport","v":0.3476}],"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 26, ал. 2","en":"Draft State Budget Act 2027, Art. 26, ал. 2"}}],"rel":[{"id":"rel_d1","bg":"Българска православна църква","en":"Bulgarian Orthodox Church – Bulgarian Patriarchate","v":28.4066,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 6, ал. 4","en":"Draft State Budget Act 2027, Art. 6, ал. 4"},"pn":1},{"id":"rel_d2","bg":"Мюсюлманско изповедание","en":"Muslim Denomination","v":6.1156,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 6, ал. 4","en":"Draft State Budget Act 2027, Art. 6, ал. 4"},"pn":1},{"id":"rel_d3","bg":"БПЦ — епархия в Западна и Средна Европа","en":"Bulgarian Orthodox Diocese of Western and Central Europe","v":0.4543,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 6, ал. 4","en":"Draft State Budget Act 2027, Art. 6, ал. 4"},"pn":1},{"id":"rel_d4","bg":"Български православни общини в чужбина","en":"Bulgarian Orthodox church communities abroad","v":0.4132,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 6, ал. 4","en":"Draft State Budget Act 2027, Art. 6, ал. 4"},"pn":1},{"id":"rel_d5","bg":"Католическа църква","en":"Catholic Church in Bulgaria","v":0.3958,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 6, ал. 4","en":"Draft State Budget Act 2027, Art. 6, ал. 4"},"pn":1},{"id":"rel_d6","bg":"Протестантски църкви","en":"Protestant denominations in Bulgaria","v":0.6688,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 6, ал. 4","en":"Draft State Budget Act 2027, Art. 6, ал. 4"},"pn":1},{"id":"rel_d7","bg":"Еврейска религиозна общност","en":"Jewish Religious Community in Bulgaria","v":0.0476,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 6, ал. 4","en":"Draft State Budget Act 2027, Art. 6, ал. 4"},"pn":1},{"id":"rel_d8","bg":"Арменска апостолическа църква","en":"Armenian Apostolic Orthodox Holy Church","v":0.0479,"src":{"bg":"Законопроект за държавния бюджет 2027, чл. 6, ал. 4","en":"Draft State Budget Act 2027, Art. 6, ал. 4"},"pn":1}],"cit":[{"id":"cit_ct","bg":"Корпоративен данък","en":"Corporate income tax","v":4482.6,"src":{"bg":"АСБП 2027–2029, мотиви, раздел 1.2","en":"Medium-term forecast 2027–2029, notes, section 1.2"},"f":{"bg":["Ставката остава 10%.","Еднократен данък 33% върху свръхпечалбата за 2027 г. — +800,0 млн. €."],"en":["The rate stays at 10%.","One-off 33% windfall tax for 2027 — +€800.0m."]}},{"id":"cit_oth","bg":"Други данъци по ЗКПО","en":"Other corporate-tax-law taxes","v":123.0,"src":{"bg":"АСБП 2027–2029, мотиви, раздел 1.2","en":"Medium-term forecast 2027–2029, notes, section 1.2"},"f":{"bg":["Алтернативният данък за игрални автомати става 600 € на тримесечие — +12,8 млн. €."],"en":["The alternative tax on gaming machines becomes €600 a quarter — +€12.8m."]}},{"id":"cit_div","bg":"Данъци върху дивиденти и доходи на чуждестранни фирми","en":"Withholding taxes on dividends and foreign companies","v":80.4,"src":{"bg":"АСБП 2027–2029, мотиви, раздел 1.2","en":"Medium-term forecast 2027–2029, notes, section 1.2"},"f":{"bg":["Данъкът върху дивидентите е 5%."],"en":["The dividend tax is 5%."]}}],"non":[{"id":"non_fses","bg":"Приходи на Фонд „Сигурност на електроенергийната система“","en":"Electricity System Security Fund revenue","v":1358.5,"src":{"bg":"АСБП 2027–2029, мотиви (КФП)","en":"Medium-term forecast 2027–2029, notes (consolidated programme)"},"f":{"bg":["Вноски от производителите на ток и приходи от търговия с емисии."],"en":["Contributions from power producers and emissions-trading revenue."]}},{"id":"non_con","bg":"Концесии","en":"Concessions","kids":[{"id":"non_con1","bg":"Концесии — държава","en":"Concessions — central government","v":166.7},{"id":"non_con2","bg":"Концесии — общини","en":"Concessions — municipalities","v":76.8}],"src":{"bg":"АСБП 2027–2029, мотиви, раздел 1.2","en":"Medium-term forecast 2027–2029, notes, section 1.2"},"f":{"bg":["Нова наредба за минните концесии — +42,4 млн. €; летище София отново плаща концесионно възнаграждение."],"en":["A new mining-concession ordinance — +€42.4m; Sofia Airport resumes concession payments."]}},{"id":"non_div","bg":"Дивидент от държавни дружества","en":"Dividends from state companies","v":222.0,"src":{"bg":"АСБП 2027–2029, мотиви, раздел 1.2","en":"Medium-term forecast 2027–2029, notes, section 1.2"},"f":{"bg":["Държавните дружества внасят 85% от печалбата си като дивидент."],"en":["State companies pay 85% of their profit as dividend."]}}]};
+const DEEP_XF = {"def":{"bg":["Част от бюджета на МО се отчита в други функции, затова изброените редове не покриват цялото министерство."],"en":["Part of the Defence ministry budget is classified under other functions, so the listed lines do not cover the whole ministry."]},"jud":{"bg":["Включва програмата „Правосъдие“ на Министерството на правосъдието (135,3 млн. €), отчетена частично тук."],"en":["Includes the Justice ministry’s “Justice” programme (€135.3m), partly classified here."]},"agr":{"bg":["Общата селскостопанска политика на ЕС е 1 604,3 млн. € за 2027 г. (1 195,2 от ЕС и 409,1 национални); голяма част минава през сметките за средства от ЕС."],"en":["The EU Common Agricultural Policy is €1,604.3m in 2027 (€1,195.2m EU, €409.1m national); much of it flows through the EU-funds accounts."]}};
+const SRC_REST = {bg:'Изчислено: сумата на функцията (табл. III-1) минус изброените редове',en:'Computed: the function total (Table III-1) minus the listed lines'};
+(function attachDeep(){
+  const sum = k => k.kids ? k.kids.reduce((s,x)=>s+sum(x),0) : k.v;
+  const go = n => {
+    if(n.kids){ n.kids.forEach(go); return; }
+    const d = DEEP[n.id]; if(!d) return;
+    const rest = Math.round((n.v - d.reduce((s,k)=>s+sum(k),0))*1e4)/1e4;
+    n.kids = d.slice();
+    if(rest > 0.05){
+      const xf = DEEP_XF[n.id] || {bg:[],en:[]};
+      n.kids.push({id:n.id+'_x', bg:`${n.bg} — друго`, en:`${n.en} — other`, v:rest, rest:1, src:SRC_REST,
+        f:{bg:['Разликата между сумата на функцията и изброените редове: собствени разходи на общините, средства от ЕС, други ведомства и разлики в класификацията.',...xf.bg],
+           en:['The difference between the function total and the listed lines: municipalities’ own spending, EU funds, other bodies and classification differences.',...xf.en]}});
+    }
+    delete n.v;
+  };
+  go(TREE.S); go(TREE.R);
+})();
+
+/* ===================== STATE ===================== */
+const NODES = new Map();
+(function index(){
+  for (const side of ['S','R']){
+    const walk=(n,parent,level,hue)=>{
+      n.side=side;n.parent=parent;n.level=level;n.hue=n.hue||hue;
+      NODES.set(side+'.'+n.id,n);n.key=side+'.'+n.id;
+      if(n.kids){n.kids.forEach(k=>walk(k,n,level+1,level===0?k.hue:n.hue));}
+    };
+    walk(TREE[side],null,0,TREE[side].hue);
+  }
+})();
+const LEAVES = [...NODES.values()].filter(n=>!n.kids);
+const LIM = {S:[-100,100],R:[-50,50]};
+let lang = 'bg', side = 'S', selKey = 'S.soc', pct = {}, expanded = new Set(['S.S','R.R','S.soc','R.tax']);
+const store = {get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+
+const isLocked = n => !!n.lock || (n.kids && n.kids.every(isLocked));
+/* МОД: the draft cap is €2,400. The marginal yield of each € of cap falls with the share of pay above it (Pareto tail, α=3),
+   calibrated to the Ministry's +€265.1m for 2027 (2,112→2,400 for 7 months of 2026 and 2,300→2,400 for 5). */
+const MOD0=2400, MOD_MIN=1800, MOD_MAX=6000, MOD_K=1.2644*Math.pow(2350,3)/2;
+const modOf = n => MOD0 + (pct[n.key]||0);
+const modEffect = c => MOD_K*(1/(MOD0*MOD0) - 1/(c*c));
+/* Each tax has its own peak: excise (smuggling) +20%, contributions (envelope wages) +30%, VAT +35% (≈27%, the EU's highest),
+   income and profit taxes +60%; others +35%. At the peak revenue is up by half the rise; it is back to the draft at twice the peak,
+   then keeps falling smoothly but never below 70% of the draft. */
+const TAX_LIM=[-50,100], LAF_FLOOR=0.3;
+const LAF={exc:[20,'smug'],soc_c:[30,'grey'],vat:[35,'vat'],pit:[60,'gen'],cit:[60,'gen']};
+const lafOf = n => { for(let x=n;x;x=x.parent) if(LAF[x.id]) return LAF[x.id]; return [35,'gen']; }; // corporate lines inherit from their group
+function lafferMult(p,pk){ const x=p/100, c=pk/100;
+  if(x<=0) return 1+x;
+  if(x<=2*c) return 1+x-x*x/(2*c);
+  return 1-LAF_FLOOR*(1-Math.exp(-(x-2*c)/LAF_FLOOR)); }
+const leafVal = n => n.mod ? modEffect(modOf(n)) : n.v * (n.tax ? lafferMult(pct[n.key]||0, lafOf(n)[0]) : 1 + (pct[n.key]||0)/100);
+const val = n => n.kids ? n.kids.reduce((s,k)=>s+val(k),0) : leafVal(n);
+const baseVal = n => n.kids ? n.kids.reduce((s,k)=>s+baseVal(k),0) : n.v;
+const leavesOf = n => n.kids ? n.kids.flatMap(leavesOf) : [n];
+const name = n => n[lang];
+const srcOf = n => { for(let x=n;x;x=x.parent) if(x.src) return x.src[lang]; return (n.side==='S'?SRC_F:SRC_R)[lang]; };
+const totals = () => { const S=val(TREE.S), R=val(TREE.R); return {S,R,D:S-R}; };
+leavesOf(TREE.R.kids.find(g=>g.id==='tax')).forEach(n=>{ if(!n.mod) n.tax=1; });
+const adjOf = n => leavesOf(n).filter(x=>!x.lock && !(n.kids && x.mod)); // a group's change never moves the cap
+const taxish = n => n.kids ? adjOf(n).length>0 && adjOf(n).every(x=>x.tax) : !!n.tax;
+const limOf = n => n.mod ? [MOD_MIN-MOD0, MOD_MAX-MOD0] : taxish(n) ? TAX_LIM : LIM[n.side];
+const grp = c => new Intl.NumberFormat(lang==='bg'?'bg-BG':'en-GB',{maximumFractionDigits:0,useGrouping:'always'}).format(c);
+const capTxt = c => lang==='bg' ? grp(c)+' €' : '€'+grp(c);
+const chgTxt = (n,p) => n.mod ? capTxt(MOD0+p) : p<=-100 ? t('removed') : pctTxt(p);
+
+/* ===================== FORMAT ===================== */
+const nf = (d) => new Intl.NumberFormat(lang==='bg'?'bg-BG':'en-GB',{minimumFractionDigits:d,maximumFractionDigits:d});
+function money(m, opts={}){
+  const a=Math.abs(m), sign = opts.sign ? (m>=0.005?'+':m<=-0.005?'−':'') : (m<0?'−':'');
+  const d = a>0 && a<0.095 ? 2 : 1; // small lines keep two decimals instead of reading 0,0
+  if(lang==='bg') return a>=1000 ? `${sign}${nf(2).format(a/1000)} млрд. €` : `${sign}${nf(d).format(a)} млн. €`;
+  return a>=1000 ? `${sign}€${nf(2).format(a/1000)}bn` : `${sign}€${nf(d).format(a)}m`;
+}
+function moneyCol(m){ const a=Math.abs(m); return nf(a>=100?0:a>=1?1:2).format(a); }
+function moneyShort(m){ const a=Math.abs(m); return nf(a>=10?2:3).format(a/1000); }
+function pctGdp(m){ const p=m/GDP*100; const d=Math.abs(p-3)<0.05?2:1; return `${nf(d).format(p)}%`; }
+function shareTxt(p){ return p>0&&p<0.01 ? '<'+nf(2).format(0.01)+'%' : nf(p<0.1?2:1).format(p)+'%'; }
+function pctTxt(p){ return (p>0?'+':p<0?'−':'')+nf(0).format(Math.abs(p))+'%'; }
+const t = k => T[lang][k];
+
+/* ===================== GUILLOCHE ===================== */
+function hypo(R,r,d,cx,cy,steps,rot=0){
+  const k=(R-r)/r; let p='';
+  const turns = r/gcd(Math.round(R),Math.round(r));
+  const N=steps*turns;
+  for(let i=0;i<=N;i++){const th=i/steps*Math.PI*2;
+    let x=(R-r)*Math.cos(th)+d*Math.cos(k*th), y=(R-r)*Math.sin(th)-d*Math.sin(k*th);
+    const xr=x*Math.cos(rot)-y*Math.sin(rot), yr=x*Math.sin(rot)+y*Math.cos(rot);
+    p+=(i?'L':'M')+(cx+xr).toFixed(1)+' '+(cy+yr).toFixed(1);}
+  return p;
+}
+function gcd(a,b){return b?gcd(b,a%b):a}
+function waves(w,h,lines,amp,freq,phaseStep,y0){
+  const out=[];for(let j=0;j<lines;j++){let p='';const ph=j*phaseStep;
+    for(let x=0;x<=w;x+=6){const y=y0+Math.sin(x*freq+ph)*amp+Math.sin(x*freq*0.37+ph*1.7)*amp*0.5; p+=(x?'L':'M')+x+' '+y.toFixed(1);}
+    out.push(p);}
+  return out;
+}
+function drawHeaderGuilloche(){
+  const svg=document.getElementById('guilloche');
+  const W=1600,Hh=120; svg.setAttribute('viewBox',`0 0 ${W} ${Hh}`);svg.setAttribute('preserveAspectRatio','xMaxYMid slice');
+  let s='';
+  waves(W,Hh,14,9,0.012,0.42,60).forEach(p=>s+=`<path d="${p}" fill="none" stroke="rgba(243,246,239,.18)" stroke-width=".8"/>`);
+  s+=`<path d="${hypo(64,24,30,1420,60,220)}" fill="none" stroke="rgba(243,246,239,.38)" stroke-width=".7"/>`;
+  s+=`<path d="${hypo(64,24,18,1420,60,220,.13)}" fill="none" stroke="rgba(242,212,138,.42)" stroke-width=".7"/>`;
+  s+=`<path d="${hypo(90,33,40,1220,60,220,.2)}" fill="none" stroke="rgba(243,246,239,.22)" stroke-width=".6"/>`;
+  svg.innerHTML=s;
+}
+function canvasHypo(ctx,R,r,d,cx,cy,steps,rot=0){
+  const k=(R-r)/r, turns=r/gcd(Math.round(R),Math.round(r)), N=steps*turns; ctx.beginPath();
+  for(let i=0;i<=N;i++){const th=i/steps*Math.PI*2; let x=(R-r)*Math.cos(th)+d*Math.cos(k*th), y=(R-r)*Math.sin(th)-d*Math.sin(k*th);
+    const xr=x*Math.cos(rot)-y*Math.sin(rot), yr=x*Math.sin(rot)+y*Math.cos(rot); i?ctx.lineTo(cx+xr,cy+yr):ctx.moveTo(cx+xr,cy+yr);}
+  ctx.stroke();
+}
+
+/* ===================== RENDER: capacity ===================== */
+let lastD = null;
+function equivalence(gap){
+  if(gap<=40) return '';
+  const cands=[...NODES.values()].filter(n=>n.side==='S'&&n.level>0&&n.level<=2&&!n.lock&&!n.rest&&!isLocked(n));
+  const nm=n=>n.pn?name(n):name(n).toLowerCase();
+  let best=null;
+  for(const n of cands){const v=baseVal(n);const r=v/gap; if(r>0.87&&r<1.15){const e=Math.abs(Math.log(r)); if(!best||e<best.e) best={n,e,v};}}
+  if(best) return t('eqApprox')(lang==='bg'?`колкото са разходите за ${nm(best.n)} за година`:`a full year of ${nm(best.n)} spending`);
+  let mb=null;
+  for(const n of cands){const v=baseVal(n); if(v<gap*1.2) continue; const m=gap/(v/12); const mr=Math.round(m); if(mr<1||mr>11) continue; const e=Math.abs(m-mr)/m; if(!mb||e<mb.e||(e===mb.e&&v>mb.v)) mb={n,m:mr,e,v};}
+  if(mb&&mb.e<0.08) return t('eqMonths')(mb.m,nm(mb.n));
+  return '';
+}
+let statusKey='';
+function reserveStatus(p){ // fix the paragraph to its tallest possible wording, so +/- never shifts the page
+  const w=p.clientWidth, key=lang+'|'+w; if(!w||key===statusKey) return; statusKey=key;
+  const probe=p.cloneNode(false); probe.removeAttribute('id'); probe.setAttribute('aria-hidden','true');
+  probe.style.cssText=`position:absolute;visibility:hidden;pointer-events:none;left:0;top:0;min-height:0;width:${w}px`;
+  p.parentNode.appendChild(probe);
+  const nm=n=>n.pn?name(n):name(n).toLowerCase();
+  const cands=[...NODES.values()].filter(n=>n.side==='S'&&n.level>0&&n.level<=2&&!n.lock&&!n.rest);
+  const eqs=['',...cands.flatMap(n=>[t('eqApprox')(lang==='bg'?`колкото са разходите за ${nm(n)} за година`:`a full year of ${nm(n)} spending`),t('eqMonths')(11,nm(n))])];
+  const big=money(88880), mid=money(888.8); let mx=0;
+  const fit=txt=>{ probe.textContent=txt; mx=Math.max(mx,probe.offsetHeight); };
+  eqs.forEach(eq=>fit(t('pOver')(big,'88,8%',mid,eq))); fit(t('p3')(big,'8,8%')); fit(t('pFit')(big));
+  probe.remove(); p.style.minHeight=mx+'px';
+}
+function renderCap(){
+  const {S,R,D}=totals(), lim=0.03*GDP;
+  const h=document.getElementById('statusH'), p=document.getElementById('statusP');
+  reserveStatus(p);
+  if(D>0.05){ h.innerHTML=`${t('defH')} <em class="num">${money(D)}</em>`; p.textContent = D>lim ? t('pOver')(money(D),pctGdp(D),money(D-lim),equivalence(D-lim)) : t('p3')(money(D),pctGdp(D)); }
+  else { h.innerHTML=`${t('fits')}${D<-0.05?` <em class="ok num">· ${t('surplusBy')} ${money(-D)}</em>`:''}`; p.textContent=t('pFit')(money(Math.max(0,-D))); }
+  const k=document.getElementById('kpis');
+  const dCls = D>lim?'bad':D<=0.05?'good':'';
+  k.innerHTML=`<div class="kpi"><span>${t('kSpe')}</span><b class="num">${money(S)}</b></div>
+    <div class="kpi"><span>${D>0.05?t('kDef'):t('kBal')}</span><b class="num ${dCls}">${D>0.05?pctGdp(D):money(-D)}</b><small>${t('kDraft')}</small></div>`;
+  // thread: scale to the longer of revenue + 3% band and spending
+  const scale=Math.max(S,R+lim)*1.02;
+  const fundW=Math.min(S,R)/scale*100, capX=R/scale*100, x3=(R+lim)/scale*100;
+  const th=document.getElementById('thread');
+  if(!th.dataset.ready){
+    th.innerHTML=`<div class="run fund"><div class="win"></div><div class="micro" data-m="F"></div></div><div class="run debt"><div class="win"></div><div class="micro" data-m="D"></div></div><div class="run surp"></div><div class="tick t3"></div><div class="tick tc"></div>`;
+    th.dataset.ready='1';
+  }
+  th.querySelector('[data-m="F"]').textContent=t('microF').repeat(60);
+  th.querySelector('[data-m="D"]').textContent=t('microD').repeat(40);
+  const fund=th.querySelector('.fund'), debt=th.querySelector('.debt'), surp=th.querySelector('.surp');
+  fund.style.width=fundW+'%';
+  debt.style.left=capX+'%'; debt.style.width=Math.max(0,(S-R)/scale*100)+'%';
+  debt.querySelector('.micro').style.visibility = th.clientWidth*(S-R)/scale < 64 ? 'hidden' : 'visible';
+  surp.style.left=(S/scale*100)+'%'; surp.style.width=Math.max(0,(R-S)/scale*100)+'%';
+  th.querySelector('.tc').style.left=`calc(${capX}% - 1px)`;
+  th.querySelector('.t3').style.left=`calc(${x3}% - 1px)`;
+  th.setAttribute('aria-label',`${t('lgCap')} ${money(R)}, ${t('kSpe')} ${money(S)}, ${D>0?t('lgDebt')+' '+money(D):t('lgSurp')+' '+money(-D)}`);
+  const lg=document.getElementById('threadLegend');
+  lg.innerHTML=`<span style="left:0">${t('lgFund')} · <b class="num">${money(Math.min(S,R))}</b></span>
+    ${D>0.05?`<span class="l-r" style="left:100%;color:var(--red)">${t('lgDebt')} · <b class="num" style="color:var(--red)">${money(D)}</b></span>`:`<span class="l-r" style="left:100%;color:var(--gain)">${t('lgSurp')} · <b class="num" style="color:var(--gain)">${money(-D)}</b></span>`}
+    ${S<=R?`<span class="l-r l-c" style="left:${capX}%">${t('lgCap')} <b class="num">${money(R)}</b></span>`:''}
+    `;
+  const l3=th.querySelector('.l3lab')||Object.assign(document.createElement('span'),{className:'l3lab'}); th.appendChild(l3);
+  l3.style.left=x3+'%'; l3.textContent=lang==='bg'?'правило на ЕС: 3% от БВП':'EU rule: 3% of GDP';
+  // avoid overlap between capacity label and debt label on narrow screens
+  const sh=document.getElementById('live');
+  const pg=pctGdp(Math.max(D,0));
+  if(lastD!==null && Math.abs(lastD-D)>0.01) sh.textContent=t('live')(pg);
+  lastD=D;
+}
+
+/* ===================== RENDER: tree ===================== */
+const ICON_CHEV='<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 2l4 4-4 4"/></svg>';
+const ICON_LOCK='<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="5.5" width="8" height="5.5"/><path d="M4 5.5V4a2 2 0 0 1 4 0v1.5"/></svg>';
+function visibleRows(){
+  const out=[];const walk=(n)=>{out.push(n); if(n.kids&&expanded.has(n.key)) n.kids.forEach(walk);};
+  TREE[side].kids.forEach(walk); return out;
+}
+function deltaOf(n){ return val(n)-baseVal(n); }
+function deficitEffect(n){ const d=deltaOf(n); return n.side==='S'? d : -d; } // + means deficit grows
+function renderTree(){
+  const tree=document.getElementById('tree');
+  const rows=visibleRows(); const total=val(TREE[side]);
+  const sel=NODES.get(selKey);
+  const selParent = sel && sel.side===side ? sel.parent : null;
+  tree.classList.toggle('focus-mode', !!(sel && sel.side===side && sel.level>=1));
+  tree.innerHTML=rows.map(n=>{
+    const v=val(n), share=Math.max(0,Math.min(100, v/total*100*2.2));
+    const eff=deficitEffect(n), lk=isLocked(n), gone=!n.kids&&(pct[n.key]||0)<=-100;
+    const p = n.kids ? null : (pct[n.key]||0);
+    const sib = selParent && n.parent===selParent && n.key!==selKey && !n.kids===!sel.kids ? ' sib':'';
+    let tag='';
+    if(Math.abs(eff)>0.05) tag+=`<span class="${eff<0?'d-good':'d-bad'} num">${p!==null&&p!==0&&!n.mod?chgTxt(n,p)+' · ':''}${money(eff,{sign:true}).replace(/^\+/,'+')}</span>`;
+    if(lk) tag+=`<span class="lock">${ICON_LOCK}<span>${t('legLocked')}</span></span>`;
+    return `<div class="row${gone?' gone':''}${sib}" role="treeitem" id="r-${n.key.replace('.','-')}" data-key="${n.key}" aria-level="${n.level}" ${n.kids?`aria-expanded="${expanded.has(n.key)}"`:''} aria-selected="${n.key===selKey}" tabindex="${n.key===selKey?0:-1}" style="--lv:${n.level-1};--hue:${H[n.hue]}">
+      <span class="cv">${n.kids?ICON_CHEV:''}</span><span class="dot"></span>
+      <span class="amt num"><i style="width:${share.toFixed(1)}%"></i>${n.mod ? (Math.abs(v)<0.05?'—':(v>0?'+':'−')+moneyCol(v)) : moneyCol(v)}</span>
+      <span class="lab">${name(n)}${n.mod?` <span class="modv num">${chgTxt(n,pct[n.key]||0)}</span>`:''}</span><span class="tag">${tag}</span></div>`;
+  }).join('');
+  const root=TREE[side], re=deficitEffect(root);
+  document.getElementById('treeTotal').innerHTML=`<span></span><span></span><span class="amt num">${moneyCol(val(root))}</span><span class="lab">${name(root)}</span><span class="tag">${Math.abs(re)>0.05?`<span class="${re<0?'d-good':'d-bad'} num">${money(re,{sign:true})}</span>`:''}</span>`;
+  renderCrumb();
+}
+function renderCrumb(){
+  const c=document.getElementById('crumb'); const sc=document.getElementById('treeScroll');
+  const rows=[...document.querySelectorAll('#tree .row')];
+  const top=sc.getBoundingClientRect().top+ (window.innerWidth<1024?0:30);
+  let first=rows.find(r=>r.getBoundingClientRect().bottom>top+4) || rows[0];
+  let n = first ? NODES.get(first.dataset.key) : TREE[side];
+  const sel=NODES.get(selKey); if(sel && sel.side===side && document.activeElement && document.activeElement.closest && document.activeElement.closest('#tree')) n=sel;
+  const path=[];for(let x=n;x;x=x.parent) path.unshift(x);
+  c.innerHTML=path.map((x,i)=>`${i?'<i>→</i>':''}<span>${name(x)}</span>`).join(' ')+`<span class="u">${lang==='bg'?'суми в млн. €':'amounts in € m'}</span>`;
+}
+
+/* ===================== RENDER: selected ===================== */
+function lockText(n){ const l=n.lock||(n.kids&&leavesOf(n).every(x=>x.lock)&&leavesOf(n)[0].lock); return l==='eu'?t('lockEu'):l==='int'?t('lockInt'):l==='grt'?t('lockGrt'):''; }
+function groupPct(n){ const ls=adjOf(n); if(!ls.length) return 0; const ps=ls.map(x=>pct[x.key]||0); return ps.every(p=>p===ps[0])?ps[0]:Math.round((val(n)-baseVal(n))/baseVal(n)*100); }
+// a line's curve; a group's curve is its lines' curves weighted by their draft size
+function curveOf(n){ const ls=n.kids?adjOf(n):[n], tot=ls.reduce((a,x)=>a+x.v,0); return p=>ls.reduce((a,x)=>a+x.v*lafferMult(p,lafOf(x)[0]),0)/tot; }
+function peakOf(n){ if(!n.kids) return lafOf(n)[0]; const f=curveOf(n); let best=0; for(let q=0;q<=100;q++) if(f(q)>f(best)) best=q; return best; }
+function lafNoteOf(n){ const ls=n.kids?adjOf(n):[n], k=lafOf(ls[0]);
+  return ls.every(x=>lafOf(x)[0]===k[0]&&lafOf(x)[1]===k[1]) ? t('lafNote')(k[0],t('lafWhy')[k[1]]) : t('lafMix'); }
+const LX=p=>8+(p+50)/150*284, LY=m=>62-(m-0.45)/0.9*56;
+function lafferSvg(n){
+  const f=curveOf(n), pk=peakOf(n); let d='';
+  for(let p=-50;p<=100;p+=1) d+=(d?'L':'M')+LX(p).toFixed(1)+' '+LY(f(p)).toFixed(1);
+  return `<svg viewBox="0 0 300 70" aria-hidden="true"><line class="base" x1="8" x2="292" y1="${LY(1)}" y2="${LY(1)}"/><line class="pk" x1="${LX(pk)}" x2="${LX(pk)}" y1="4" y2="66"/><path d="${d}"/><circle r="5.5" cx="${LX(0)}" cy="${LY(1)}"/></svg>`;
+}
+function paintLaffer(n,p){
+  const el=document.getElementById('laf'); if(!el) return;
+  const f=curveOf(n), dot=el.querySelector('circle');
+  dot.setAttribute('cx',LX(p)); dot.setAttribute('cy',LY(f(p)));
+  el.querySelector('.now').textContent=t('lafNow')(pctTxt(p),pctTxt(Math.round((f(p)-1)*100)));
+  el.classList.toggle('over',p>peakOf(n));
+}
+function renderMod(n,card){
+  const c=modOf(n), e=val(n), p=pct[n.key]||0;
+  card.innerHTML=`<h3 class="sel-name"><span class="dot"></span>${name(n)}</h3>
+    <div class="sel-amt num">${capTxt(c)} <small class="unit">${t('modUnit')}</small></div>
+    <div class="sel-sub">${t('draft')}: <b class="num">${capTxt(MOD0)}</b> · ${t('modNow')}<br>
+      ${t('modEff')}: <b class="num ${e>0.05?'d-good':e<-0.05?'d-bad':''}">${Math.abs(e)<0.05?'0':money(e,{sign:true})}</b></div>
+    <ul class="facts">${n.f[lang].map(f=>`<li>${f}</li>`).join('')}</ul>
+    <div class="ctl">
+      <div class="steps" role="group" aria-label="${name(n)}">${[-500,-100,100,500].map(d=>`<button type="button" data-step="${d}" ${(d<0&&c<=MOD_MIN)||(d>0&&c>=MOD_MAX)?'disabled':''}>${d<0?'−':'+'}${capTxt(Math.abs(d))}</button>`).join('')}</div>
+      <label class="range"><span class="num">${capTxt(MOD_MIN)}</span><input type="range" id="slider" min="${MOD_MIN}" max="${MOD_MAX}" step="50" value="${c}" aria-label="${name(n)}" style="--hue:${H[n.hue]}"><output class="num" id="sliderOut">${chgTxt(n,p)}</output></label>
+      <div class="ctl-row"><button type="button" class="rs" data-act="rs" ${p?'':'disabled'}>${t('restore')}</button></div>
+    </div>
+    <p class="src">${srcOf(n)}</p>`;
+}
+function renderSel(){
+  const n=NODES.get(selKey); const card=document.getElementById('selCard');
+  if(n.mod){ card.style.setProperty('--hue',H[n.hue]); renderMod(n,card); renderSheet(); return; }
+  const v=val(n), b=baseVal(n), eff=deficitEffect(n), lk=isLocked(n);
+  const sideTotal=val(TREE[n.side]);
+  const p = n.kids ? groupPct(n) : (pct[n.key]||0);
+  const [lo,hi]=limOf(n);
+  const facts=(n.f&&n.f[lang])||[];
+  card.style.setProperty('--hue',H[n.hue]);
+  card.innerHTML=`<h3 class="sel-name"><span class="dot"></span>${name(n)}</h3>
+    <div class="sel-amt num">${money(v)}</div>
+    <div class="sel-sub">${t('draft')}: <b class="num">${money(b)}</b>${Math.abs(eff)>0.05?` · ${t('change')}: <b class="num ${eff<0?'d-good':'d-bad'}">${pctTxt(Math.round((v-b)/b*100))} (${money(v-b,{sign:true})})</b>`:''}<br>
+      ${n.parent&&n.parent.level>0?name(n.parent)+' · ':''}<span class="num">${shareTxt(v/sideTotal*100)}</span> ${n.side==='S'?t('ofSpending'):t('ofRevenue')} · <span class="num">${shareTxt(v/GDP*100)}</span> ${t('ofGdp')}</div>
+    ${facts.length?`<ul class="facts">${facts.map(f=>`<li>${f}</li>`).join('')}</ul>`:''}
+    ${lk?`<div class="lockmsg">${ICON_LOCK}<span>${lockText(n)}</span></div>`:`
+    <div class="ctl">
+      <div class="steps" role="group" aria-label="${t('change')}">${[-10,-1,1,10].map((d,i)=>`<button type="button" data-step="${d}" ${(d<0&&p<=lo)||(d>0&&p>=hi)?'disabled':''}>${t('steps')[i]}</button>`).join('')}</div>
+      <label class="range"><span class="num">${lo}%</span><input type="range" id="slider" min="${lo}" max="${hi}" step="1" value="${p}" aria-label="${t('slider')}" style="--hue:${H[n.hue]}"><output class="num" id="sliderOut">${pctTxt(p)}</output></label>
+      <div class="ctl-row">${n.side==='S'&&!n.kids?`<button type="button" class="rm" data-act="rm" ${p<=-100?'disabled':''}>${t('remove')}</button>`:''}<button type="button" class="rs" data-act="rs" ${Math.abs(v-b)<0.05?'disabled':''}>${t('restore')}</button></div>
+      ${taxish(n)?`<div class="laffer" id="laf"><div class="laf-h"><b>${t('lafTitle')}</b><span class="now num"></span></div>${lafferSvg(n)}<p>${lafNoteOf(n)}</p></div>`:''}
+      ${n.kids?`<p class="src" style="margin:0">${t('group')}</p>`:''}
+    </div>`}
+    <p class="src">${srcOf(n)}</p>`;
+  if(taxish(n) && !lk) paintLaffer(n,p);
+  renderSheet();
+}
+function renderSheet(){
+  const n=NODES.get(selKey), sh=document.getElementById('sheet');
+  const show = window.innerWidth<1024 && sheetOpen;
+  document.body.classList.toggle('has-sheet',show);
+  sh.classList.toggle('on',show);
+  if(!show) return;
+  const v=val(n), b=baseVal(n), lk=isLocked(n);
+  sh.style.setProperty('--hue',H[n.hue]);
+  sh.innerHTML=`<div class="s-top"><span class="dot"></span><b>${name(n)}</b><span class="num">${n.mod?chgTxt(n,pct[n.key]||0):money(v)}</span><button type="button" data-act="close" aria-label="${lang==='bg'?'Затвори':'Close'}"><svg viewBox="0 0 16 16" width="14" height="14" stroke="currentColor" stroke-width="2"><path d="M3 3l10 10M13 3 3 13"/></svg></button></div>
+   ${lk?`<div class="s-meta">${lockText(n)}</div>`:`<div class="s-ctl">${(n.mod?[-500,-100,100,500]:[-10,-1,1,10]).map((d,i)=>`<button type="button" data-step="${d}">${n.mod?(d<0?'−':'+')+capTxt(Math.abs(d)):t('steps')[i]}</button>`).join('')}<button type="button" class="rs" data-act="rs" ${Math.abs(v-b)<0.05?'disabled':''}>${t('restore')}</button></div>
+   <div class="s-meta">${n.mod ? `${t('draft')}: ${capTxt(MOD0)} · ${chgTxt(n,pct[n.key]||0)}${Math.abs(v)>0.05?' · '+money(v,{sign:true}):''}`
+     : taxish(n) && (pct[n.key]||0) ? t('lafNow')(pctTxt(pct[n.key]),pctTxt(Math.round((v-b)/b*100)))
+     : `${t('draft')}: ${money(b)}${Math.abs(v-b)>0.05?` · ${pctTxt(Math.round((v-b)/b*100))}`:''}`} · ${t('sheetHint')}</div>`}`;
+}
+let sheetOpen=false;
+
+/* ===================== RENDER: log ===================== */
+function renderLog(){
+  const card=document.getElementById('logCard');
+  const ch=LEAVES.filter(n=>(pct[n.key]||0)!==0).sort((a,b)=>Math.abs(deficitEffect(b))-Math.abs(deficitEffect(a)));
+  const tot=ch.reduce((s,n)=>s+deficitEffect(n),0);
+  card.innerHTML=`<div class="log-head"><h3>${t('logTitle')}</h3>${ch.length?`<button type="button" data-act="rsall">${t('restoreAll')}</button>`:''}</div>
+   ${ch.length?`<ul>${ch.map(n=>{const e=deficitEffect(n), p=pct[n.key];return `<li style="--hue:${H[n.hue]}"><span class="dot"></span><span class="nm" data-go="${n.key}">${name(n)}<small>${chgTxt(n,p)}</small></span><span class="ef num ${e<0?'d-good':'d-bad'}">${money(e,{sign:true})}</span><button type="button" data-undo="${n.key}">${t('restore')}</button></li>`}).join('')}</ul>
+   <p class="log-sum">${t('logSum')(ch.length,money(tot,{sign:true}))}</p>`:`<p class="empty">${t('logEmpty')}</p>${savedPlan?`<button type="button" class="resume" data-act="resume">${t('resume')(Object.keys(decode(savedPlan)).length)}</button>`:''}`}`;
+}
+
+/* ===================== RENDER: treemap ===================== */
+function squarify(items,x,y,w,h){
+  const out=[]; items=items.filter(i=>i.v>0).sort((a,b)=>b.v-a.v);
+  const total=items.reduce((s,i)=>s+i.v,0); if(!total) return out;
+  const scale=w*h/total; let rest=items.map(i=>({...i,a:i.v*scale}));
+  while(rest.length){
+    const short=Math.min(w,h); let row=[rest[0]], i=1;
+    const worst=(r)=>{const s=r.reduce((q,o)=>q+o.a,0), mx=Math.max(...r.map(o=>o.a)), mn=Math.min(...r.map(o=>o.a)); return Math.max(short*short*mx/(s*s), s*s/(short*short*mn));};
+    while(i<rest.length && worst([...row,rest[i]])<=worst(row)){row.push(rest[i]);i++;}
+    const s=row.reduce((q,o)=>q+o.a,0);
+    if(w>=h){const cw=s/h; let cy=y; row.forEach(o=>{const ch=o.a/cw; out.push({...o,x,y:cy,w:cw,h:ch}); cy+=ch;}); x+=cw; w-=cw;}
+    else {const rh=s/w; let cx=x; row.forEach(o=>{const cw2=o.a/rh; out.push({...o,x:cx,y,w:cw2,h:rh}); cx+=cw2;}); y+=rh; h-=rh;}
+    rest=rest.slice(i);
+  }
+  return out;
+}
+function treemapRects(W,Hh){
+  const groups=TREE.S.kids.map(g=>({g,v:val(g)}));
+  const out=[];
+  squarify(groups,0,0,W,Hh).forEach(r=>{
+    if(r.g.kids){ squarify(r.g.kids.map(k=>({n:k,v:val(k)})),r.x,r.y,r.w,r.h).forEach(c=>out.push({n:c.n,g:r.g,x:c.x,y:c.y,w:c.w,h:c.h})); }
+    else out.push({n:r.g,g:r.g,x:r.x,y:r.y,w:r.w,h:r.h});
+  });
+  return out;
+}
+function renderTM(){
+  const el=document.getElementById('tm'); const W=el.clientWidth||400, Hh=el.clientHeight||230;
+  const rects=treemapRects(W,Hh);
+  const existing=new Map([...el.children].map(c=>[c.dataset.key,c]));
+  const seen=new Set();
+  rects.forEach(r=>{
+    let c=existing.get(r.n.key); if(!c){c=document.createElement('div');c.className='c';c.dataset.key=r.n.key;el.appendChild(c);}
+    seen.add(r.n.key);
+    c.style.cssText=`left:${r.x}px;top:${r.y}px;width:${r.w}px;height:${r.h}px;background-color:${HEX[r.n.hue]}`;
+    c.classList.toggle('lk',!!r.n.lock); c.classList.toggle('ch',Math.abs(deltaOf(r.n))>0.05); c.classList.toggle('on',r.n.key===selKey||r.g.key===selKey);
+    const big=r.w>64&&r.h>30;
+    c.innerHTML=big?`${name(r.n)}<b class="num">${moneyShort(val(r.n))}</b>`:'';
+    c.title=`${name(r.n)} · ${money(val(r.n))}`;
+  });
+  existing.forEach((c,k)=>{if(!seen.has(k)) c.remove();});
+}
+
+/* ===================== SERIAL / URL ===================== */
+function encode(){ return Object.keys(pct).filter(k=>pct[k]).sort().map(k=>k.replace('.','')+':'+pct[k]).join(','); }
+function decode(s){ const o={}; if(!s) return o; s.split(',').forEach(p=>{const [k,v]=p.split(':'); if(!k||v===undefined) return; const key=k[0]+'.'+k.slice(1); const n=NODES.get(key); const num=parseInt(v,10); if(n&&!n.kids&&!n.lock&&Number.isFinite(num)){const [lo,hi]=limOf(n); o[key]=Math.max(lo,Math.min(hi,num));}}); return o; }
+function paintSerial(){ document.getElementById('serialNo').innerHTML=[...serial()].map((ch,i)=>`<span style="font-size:${11+i}px">${ch}</span>`).join(''); }
+function serial(){ const s=encode(); if(!s) return '0000001'; let h=2166136261; for(const ch of s){h^=ch.charCodeAt(0);h=Math.imul(h,16777619);} return (h>>>0).toString(36).toUpperCase().padStart(7,'0').slice(-7); }
+let savedPlan=null;
+function persist(){ const e=encode(); if(e) savedPlan=null; if(e || !savedPlan) store.set('ob27.plan',e); const url=location.pathname+location.search+(e?'#p='+e:''); try{history.replaceState(null,'',url);}catch(x){} }
+
+/* ===================== ACTIONS ===================== */
+function applyStep(n,d){
+  const targets = n.kids ? adjOf(n) : [n];
+  targets.forEach(x=>{const [lo,hi]=limOf(x); pct[x.key]=Math.max(lo,Math.min(hi,(pct[x.key]||0)+d)); if(!pct[x.key]) delete pct[x.key];});
+  update();
+}
+function setPct(n,p){
+  const targets = n.kids ? adjOf(n) : [n];
+  targets.forEach(x=>{const [lo,hi]=limOf(x); const v=Math.max(lo,Math.min(hi,p)); if(v) pct[x.key]=v; else delete pct[x.key];});
+  update();
+}
+function restore(n){ (n.kids?leavesOf(n):[n]).forEach(x=>delete pct[x.key]); update(); }
+function select(key,{focus=false,scroll=true,open=true}={}){
+  const n=NODES.get(key); if(!n) return;
+  selKey=key;
+  if(n.side!==side){ side=n.side; syncTabs(); }
+  for(let x=n.parent;x;x=x.parent) expanded.add(x.key);
+  if(open && window.innerWidth<1024) sheetOpen=true;
+  renderTree(); renderSel(); renderTM();
+  const row=document.getElementById('r-'+key.replace('.','-'));
+  if(row){ if(scroll) row.scrollIntoView({block:'nearest'}); if(focus) row.focus({preventScroll:!scroll}); }
+}
+function update(){
+  renderCap(); renderTree(); renderSel(); renderLog(); renderTM();
+  paintSerial();
+  persist();
+}
+function syncTabs(){
+  document.querySelectorAll('[role=tab]').forEach(b=>b.setAttribute('aria-selected',b.dataset.side===side));
+  document.getElementById('tree').setAttribute('aria-labelledby','tab-'+side);
+}
+
+/* ===================== I18N apply ===================== */
+function applyLang(){
+  document.documentElement.lang=lang;
+  document.title = lang==='bg'?'Оправи бюджета 2027':'Fix the Budget 2027';
+  document.querySelectorAll('[data-t]').forEach(el=>{const v=T[lang][el.dataset.t]; if(typeof v==='string') el.textContent=v;});
+  document.querySelectorAll('[data-t-html]').forEach(el=>{el.innerHTML=T[lang][el.dataset.tHtml];});
+  document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.lang===lang));
+  document.getElementById('dlgClose').setAttribute('aria-label',lang==='bg'?'Затвори':'Close');
+  document.getElementById('howX').setAttribute('aria-label',lang==='bg'?'Затвори':'Close');
+  document.getElementById('how1').textContent=t('how1')(money(DRAFT_DEFICIT));
+  const se=document.getElementById('serial'); se.title=T[lang].serialTip; se.setAttribute('aria-label',T[lang].serialTip);
+  store.set('ob27.lang',lang);
+  update();
+}
+
+/* ===================== EVENTS ===================== */
+document.getElementById('tree').addEventListener('click',e=>{
+  const row=e.target.closest('.row'); if(!row) return;
+  const n=NODES.get(row.dataset.key);
+  if(e.target.closest('.cv') && n.kids){ expanded.has(n.key)?expanded.delete(n.key):expanded.add(n.key); renderTree(); return; }
+  if(n.kids && n.key===selKey){ expanded.has(n.key)?expanded.delete(n.key):expanded.add(n.key); }
+  select(n.key,{focus:true,scroll:false});
+});
+document.getElementById('tree').addEventListener('keydown',e=>{
+  const row=e.target.closest('.row'); if(!row) return;
+  const rows=[...document.querySelectorAll('#tree .row')]; const i=rows.indexOf(row); const n=NODES.get(row.dataset.key);
+  const go=(r)=>{ if(r) select(r.dataset.key,{focus:true,open:false}); };
+  switch(e.key){
+    case 'ArrowDown': e.preventDefault(); go(rows[i+1]); break;
+    case 'ArrowUp': e.preventDefault(); go(rows[i-1]); break;
+    case 'Home': e.preventDefault(); go(rows[0]); break;
+    case 'End': e.preventDefault(); go(rows[rows.length-1]); break;
+    case 'ArrowRight': e.preventDefault(); if(n.kids){ if(!expanded.has(n.key)){expanded.add(n.key);renderTree();document.getElementById(row.id).focus();} else go(rows[i+1]); } break;
+    case 'ArrowLeft': e.preventDefault(); if(n.kids&&expanded.has(n.key)){expanded.delete(n.key);renderTree();document.getElementById(row.id).focus();} else if(n.parent && n.parent.level>0) select(n.parent.key,{focus:true,open:false}); break;
+    case 'Enter': case ' ': e.preventDefault(); if(n.kids){expanded.has(n.key)?expanded.delete(n.key):expanded.add(n.key); renderTree(); document.getElementById(row.id).focus();} break;
+    case '-': case '_': case 'PageDown': if(!isLocked(n)){e.preventDefault(); applyStep(n,(e.key==='PageDown'?-10:-1)*(n.mod?50:1)); document.getElementById(row.id)?.focus();} break;
+    case '+': case '=': case 'PageUp': if(!isLocked(n)){e.preventDefault(); applyStep(n,(e.key==='PageUp'?10:1)*(n.mod?50:1)); document.getElementById(row.id)?.focus();} break;
+    case 'Delete': if(n.side==='S'&&!n.kids&&!n.lock){e.preventDefault(); setPct(n,-100); document.getElementById(row.id)?.focus();} break;
+    case 'Backspace': e.preventDefault(); restore(n); document.getElementById(row.id)?.focus(); break;
+  }
+});
+document.getElementById('treeScroll').addEventListener('scroll',()=>requestAnimationFrame(renderCrumb),{passive:true});
+window.addEventListener('scroll',()=>{ if(window.innerWidth<1024){ requestAnimationFrame(renderCrumb); document.getElementById('cap').classList.toggle('compact',window.scrollY>120); } },{passive:true});
+function onCtl(e){
+  const n=NODES.get(selKey); const b=e.target.closest('button'); if(!b) return;
+  if(b.dataset.step) applyStep(n,+b.dataset.step);
+  else if(b.dataset.act==='rm') setPct(n,-100);
+  else if(b.dataset.act==='rs') restore(n);
+  else if(b.dataset.act==='close'){ sheetOpen=false; renderSheet(); }
+}
+document.getElementById('selCard').addEventListener('click',onCtl);
+document.getElementById('sheet').addEventListener('click',onCtl);
+document.getElementById('selCard').addEventListener('input',e=>{
+  if(e.target.id!=='slider') return; const n=NODES.get(selKey); const p=n.mod ? +e.target.value-MOD0 : +e.target.value;
+  document.getElementById('sliderOut').textContent=n.mod ? chgTxt(n,p) : pctTxt(p);
+  if(taxish(n)) paintLaffer(n,p);
+  const targets=n.kids?adjOf(n):[n];
+  targets.forEach(x=>{ if(p) pct[x.key]=p; else delete pct[x.key]; });
+  renderCap(); renderTree(); renderLog(); renderTM(); paintSerial();
+});
+document.getElementById('selCard').addEventListener('change',e=>{ if(e.target.id==='slider'){ renderSel(); persist(); }});
+document.getElementById('logCard').addEventListener('click',e=>{
+  const u=e.target.closest('[data-undo]'); if(u){ delete pct[u.dataset.undo]; update(); return; }
+  const g=e.target.closest('[data-go]'); if(g){ select(g.dataset.go,{focus:true}); return; }
+  if(e.target.closest('[data-act="rsall"]')){ pct={}; update(); }
+  if(e.target.closest('[data-act="resume"]')){ pct=decode(savedPlan); savedPlan=null; update(); }
+});
+document.getElementById('tm').addEventListener('click',e=>{ const c=e.target.closest('.c'); if(c) select(c.dataset.key,{focus:true}); });
+document.querySelectorAll('[role=tab]').forEach(b=>b.addEventListener('click',()=>{ side=b.dataset.side; syncTabs(); const s=NODES.get(selKey); if(s.side!==side) selKey=TREE[side].kids[0].key; renderTree(); renderSel(); renderTM(); }));
+document.querySelector('.tabs').addEventListener('keydown',e=>{ if(e.key==='ArrowRight'||e.key==='ArrowLeft'){ const other=document.querySelector(`[role=tab][data-side="${side==='S'?'R':'S'}"]`); other.click(); other.focus(); }});
+document.querySelectorAll('[data-level]').forEach(b=>b.addEventListener('click',()=>{
+  const L=+b.dataset.level; expanded=new Set();
+  NODES.forEach(n=>{ if(n.kids && (n.level < L || L===9)) expanded.add(n.key); });
+  renderTree();
+}));
+document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>{ lang=b.dataset.lang; applyLang(); }));
+const howDlg=document.getElementById('howDlg');
+function openHow(){ if(howDlg.open) return; if(typeof howDlg.showModal==='function') howDlg.showModal(); else howDlg.setAttribute('open',''); }
+function closeHow(){ if(typeof howDlg.close==='function') howDlg.close(); else howDlg.removeAttribute('open'); }
+document.getElementById('helpBtn').addEventListener('click',openHow);
+document.getElementById('howX').addEventListener('click',closeHow);
+document.getElementById('howGo').addEventListener('click',closeHow);
+howDlg.addEventListener('click',e=>{ if(e.target===howDlg) closeHow(); }); // a click on the backdrop
+howDlg.addEventListener('close',()=>store.set('ob27.how','1'));
+if(document.fonts) document.fonts.ready.then(()=>{ statusKey=''; renderCap(); });
+let rT; window.addEventListener('resize',()=>{ clearTimeout(rT); rT=setTimeout(()=>{ renderTM(); renderSheet(); renderCap(); },120); });
+
+/* ===================== EXPORT CARD ===================== */
+let fmt='wide';
+async function fontsReady(){
+  try{ await Promise.all(['800 100px "Sofia Sans Extra Condensed"','800 40px "Sofia Sans Condensed"','700 20px "Sofia Sans Condensed"','600 20px "Sofia Sans"','400 20px "Sofia Sans"'].map(f=>document.fonts.load(f,'АБВЖЩЯабвжщя€0123456789%'))); }catch(e){}
+}
+const SHORT={bg:{soc:'Социални',hea:'Здраве',sec:'Сигурност',edu:'Просвета',eco:'Икономика',gen:'Управление',env:'Жилища, среда',cul:'Култура',eu:'ЕС',int:'Лихви'},en:{soc:'Social',hea:'Health',sec:'Security',edu:'Education',eco:'Economy',gen:'Government',env:'Housing, env.',cul:'Culture',eu:'EU',int:'Interest'}};
+function borderWave(c,W,Hh,m,amp,period,ph){ // a sine that follows the card edge at inset m
+  const w=W-2*m,h=Hh-2*m,P=2*(w+h),k=Math.PI*2/period; c.beginPath();
+  for(let s=0;s<=P;s+=2){ let x,y,nx,ny;
+    if(s<w){x=m+s;y=m;nx=0;ny=1;} else if(s<w+h){x=W-m;y=m+s-w;nx=-1;ny=0;} else if(s<2*w+h){x=W-m-(s-w-h);y=Hh-m;nx=0;ny=-1;} else {x=m;y=Hh-m-(s-2*w-h);nx=1;ny=0;}
+    const o=Math.sin(s*k+ph)*amp; s?c.lineTo(x+nx*o,y+ny*o):c.moveTo(x+nx*o,y+ny*o); }
+  c.closePath(); c.stroke();
+}
+function cardBorder(c,W,Hh,pw,ph){
+  const pass=(clip,col)=>{ c.save(); c.beginPath(); clip(); c.clip('evenodd'); c.strokeStyle=col; c.lineWidth=.9;
+    for(let i=0;i<4;i++) borderWave(c,W,Hh,21,6,26,i*Math.PI/2);
+    c.lineWidth=1; c.strokeRect(31.5,31.5,W-63,Hh-63); c.restore(); };
+  pass(()=>c.rect(0,0,pw,ph),'rgba(243,246,239,.62)');
+  pass(()=>{c.rect(0,0,W,Hh); c.rect(0,0,pw,ph);},'rgba(47,107,74,.72)');
+  c.strokeStyle='#1d2a24'; c.lineWidth=2; c.strokeRect(11,11,W-22,Hh-22);
+}
+const CF={x:'"Sofia Sans Extra Condensed","Sofia Sans Condensed",sans-serif',c:'"Sofia Sans Condensed","Sofia Sans",sans-serif',s:'"Sofia Sans",system-ui,sans-serif'};
+function cardHead(c,W,Hh,pw,ph,o){
+  const F=CF, {D}=totals();
+  // paper + fine guilloche field (repeats every 1350px on a long list)
+  c.fillStyle='#eef1e8'; c.fillRect(0,0,W,Hh);
+  c.strokeStyle='rgba(47,107,74,.10)'; c.lineWidth=1; const BH=Math.min(Hh,1350);
+  for(let off=0;off<Hh;off+=BH) for(let j=0;j<26;j++){ c.beginPath(); for(let x=0;x<=W;x+=6){ const y=off+BH*0.5+Math.sin(x*0.009+j*0.33)*BH*0.28+Math.sin(x*0.0031+j*0.5)*BH*0.08; x?c.lineTo(x,y):c.moveTo(x,y);} c.stroke(); }
+  // green panel
+  c.fillStyle='#2f6b4a'; c.fillRect(0,0,pw,ph);
+  c.save(); c.beginPath(); c.rect(0,0,pw,ph); c.clip();
+  c.lineWidth=.8; const rx=o.rx, ry=o.ry;
+  c.strokeStyle='rgba(243,246,239,.20)'; canvasHypo(c,150,56,70,rx,ry,240);
+  c.strokeStyle='rgba(242,212,138,.30)'; canvasHypo(c,150,56,44,rx,ry,240,.11);
+  c.strokeStyle='rgba(243,246,239,.10)'; canvasHypo(c,210,77,96,rx,ry,240,.2);
+  c.restore();
+  // guilloche border, as on a note
+  cardBorder(c,W,Hh,pw,ph);
+  // big numeral
+  c.fillStyle='#f3f6ef'; c.textBaseline='alphabetic';
+  c.font=`800 ${o.big}px ${F.x}`; c.fillText(D>0.05?pctGdp(D):'0%', o.numX, o.numY);
+  c.font=`740 ${o.subF}px ${F.c}`; c.fillStyle='#f3f6ef';
+  c.fillText(D>0.05?t('cardDef'):t('cardSurplus')+' · '+money(-D), o.numX, o.numY+o.sub1);
+  c.font=`650 ${o.draftF}px ${F.s}`; c.fillStyle='rgba(243,246,239,.78)';
+  c.fillText(t('cardDraft'), o.numX, o.numY+o.sub1+32);
+  // serial
+  const lab=`${t('serialLab')} · `, num=serial(); c.font=`800 17px ${F.c}`;
+  const lw=c.measureText(lab).width; let nw=0; [...num].forEach((ch,i)=>{ c.font=`800 ${15+i*1.6}px ${F.c}`; nw+=c.measureText(ch).width+1; });
+  const sw=lw+nw+24, sx=W-sw-48, sy=46;
+  c.fillStyle='#eef1e8'; c.fillRect(sx,sy,sw,34); c.fillStyle='#c8202f'; c.font=`800 17px ${F.c}`; c.fillText(lab,sx+12,sy+24);
+  let nx=sx+12+lw; [...num].forEach((ch,i)=>{ c.font=`800 ${15+i*1.6}px ${F.c}`; c.fillText(ch,nx,sy+24); nx+=c.measureText(ch).width+1; });
+  // brand line in panel
+  c.font=`800 26px ${F.c}`; c.fillStyle='#f3f6ef'; c.fillText(t('title')+' 2027', o.numX, 66);
+}
+function cardTitle(c,bx,by,size,stSize){
+  const F=CF, {D}=totals(), lim=0.03*GDP;
+  c.fillStyle='#1d2a24'; c.font=`800 ${size}px ${F.c}`; c.fillText(t('cardTitle'), bx, by+40);
+  c.font=`740 ${stSize}px ${F.c}`;
+  let st; if(D>0.05){ st=`${t('defH')} ${money(D)} · ${D>lim?t('over3'):t('under3')}`; c.fillStyle='#c8202f'; } else { st=t('fits')+(D<-0.05?` · ${t('surplusBy')} ${money(-D)}`:''); c.fillStyle='#25603f'; }
+  c.fillText(st, bx, by+80);
+}
+function cardThread(c,bx,ty,bw,thh){
+  const F=CF, {S,R}=totals(), lim=0.03*GDP;
+  const scale=Math.max(S,R+lim)*1.02;
+  c.fillStyle='#e4e9dd'; c.fillRect(bx,ty,bw,thh);
+  const fw=Math.min(S,R)/scale*bw; c.fillStyle='#2c4636'; c.fillRect(bx,ty,fw,thh);
+  if(S>R){ c.fillStyle='#c8202f'; c.fillRect(bx+R/scale*bw,ty,(S-R)/scale*bw,thh); }
+  else { c.strokeStyle='#25603f'; c.lineWidth=2; c.strokeRect(bx+S/scale*bw+1,ty+1,(R-S)/scale*bw-2,thh-2); }
+  c.fillStyle='rgba(0,0,0,.25)'; for(let x=bx+46;x<bx+Math.max(S,R)/scale*bw;x+=58){ c.fillRect(x,ty,12,thh); }
+  const micro=(unit,x0,w)=>{ const word=unit.replace(/\s*·\s*$/,'');
+    // whole words only, never cut at a seam; a short tail gets tighter type before it gives up
+    for(const [fs,ls,pl,pr] of [[10,2.2,10,8],[9,.6,5,4]]){ c.save(); c.font=`740 ${fs}px ${F.c}`; if('letterSpacing' in c) c.letterSpacing=ls+'px'; c.textBaseline='middle'; c.fillStyle='rgba(255,255,255,.66)';
+      const ww=c.measureText(word).width, uw=c.measureText(unit).width+4, end=x0+w-pr;
+      if(x0+pl+ww>end){ c.restore(); continue; }
+      for(let x=x0+pl; x+ww<=end; x+=uw){ c.fillText(x+uw+ww<=end?unit.trimEnd():word,x,ty+thh/2+1); } c.restore(); return; } };
+  micro(t('microF'),bx,fw);
+  if(S>R) micro(t('microD'),bx+R/scale*bw,(S-R)/scale*bw);
+  c.fillStyle='#1d2a24'; c.fillRect(bx+R/scale*bw-1,ty-6,2,thh+12);
+  const x3=bx+(R+lim)/scale*bw; c.setLineDash([4,3]); c.strokeStyle='#3f4d45'; c.lineWidth=2; c.beginPath(); c.moveTo(x3,ty-6); c.lineTo(x3,ty+thh+6); c.stroke(); c.setLineDash([]);
+  c.font=`650 17px ${F.s}`; c.fillStyle='#3f4d45';
+  c.fillText(`${t('cardRev')} ${money(R)}`, bx, ty+thh+26);
+  const sp=`${t('cardSpe')} ${money(S)}`; c.fillText(sp, bx+bw-c.measureText(sp).width, ty+thh+26);
+}
+function changeList(){ return LEAVES.filter(n=>(pct[n.key]||0)!==0).sort((a,b)=>Math.abs(deficitEffect(b))-Math.abs(deficitEffect(a))); }
+function drawCard(){
+  if(fmt==='list') return drawList();
+  const cv=document.getElementById('card'); const W=fmt==='wide'?1200:1080, Hh=fmt==='wide'?630:1350;
+  cv.width=W; cv.height=Hh; const c=cv.getContext('2d');
+  const {S,R,D}=totals(), lim=0.03*GDP;
+  const F=CF;
+  const pw = fmt==='wide'? 430 : W, ph = fmt==='wide'? Hh : 470;
+  const numX = fmt==='wide'?48:60;
+  cardHead(c,W,Hh,pw,ph,{big:fmt==='wide'?170:220,numX,numY:fmt==='wide'?330:300,sub1:fmt==='wide'?44:64,subF:fmt==='wide'?28:34,draftF:fmt==='wide'?20:24,rx:fmt==='wide'?pw*0.5:W-200,ry:fmt==='wide'?Hh*0.40:ph*0.5});
+  // right/body area
+  const bx = fmt==='wide'? pw+40 : 60, by = fmt==='wide'? 70 : ph+60, bw = fmt==='wide'? W-pw-80 : W-120;
+  cardTitle(c,bx,by,fmt==='wide'?52:60,fmt==='wide'?24:28);
+  // thread
+  const ty=by+104, thh=26; cardThread(c,bx,ty,bw,thh);
+  // changes
+  const ch=changeList(); let cy=ty+thh+72;
+  c.fillStyle='#1d2a24'; c.font=`800 15px ${F.c}`; c.fillText(t('cardChanges').toUpperCase(), bx, cy);
+  if(ch.length){ c.save(); c.font=`740 13px ${F.c}`; if('letterSpacing' in c) c.letterSpacing='1.2px'; c.fillStyle='#5d6a62'; const eh=t('cardEff').toUpperCase(); c.fillText(eh, bx+bw-c.measureText(eh).width, cy); c.restore(); }
+  cy+=12;
+  const cap = fmt==='wide'? 5 : 6, maxRows = ch.length>cap ? cap-1 : cap;
+  if(!ch.length){ c.font=`560 20px ${F.s}`; c.fillStyle='#3f4d45'; c.fillText(t('cardNoChanges'), bx, cy+28); }
+  ch.slice(0,maxRows).forEach((n,i)=>{
+    const y=cy+16+i*36; c.strokeStyle='#cbd4c6'; c.lineWidth=1; c.beginPath(); c.moveTo(bx,y-4); c.lineTo(bx+bw,y-4); c.stroke();
+    c.fillStyle=HEX[n.hue]; c.beginPath(); c.arc(bx+7,y+13,6,0,Math.PI*2); c.fill();
+    c.fillStyle='#1d2a24'; c.font=`650 20px ${F.s}`;
+    const p=pct[n.key]; const lab=`${name(n)}`; let lw=bw-260; let s=lab; while(c.measureText(s).width>lw && s.length>4) s=s.slice(0,-2); if(s!==lab) s=s.trimEnd()+'…';
+    c.fillText(s, bx+22, y+20);
+    c.font=`740 20px ${F.c}`; c.fillStyle='#3f4d45'; const pt=chgTxt(n,p); c.fillText(pt, bx+bw-210, y+20);
+    const e=deficitEffect(n); c.fillStyle=e<0?'#25603f':'#c8202f'; const et=money(e,{sign:true}); c.fillText(et, bx+bw-c.measureText(et).width, y+20);
+  });
+  if(ch.length>maxRows){ c.font=`650 17px ${F.s}`; c.fillStyle='#5d6a62'; c.fillText(t('cardMore')(ch.length-maxRows), bx+22, cy+16+maxRows*36+18); }
+  // wide: composition strip of the player's spending
+  if(fmt==='wide') cardStrip(c,bx,Hh-112,bw,30);
+  // portrait: treemap
+  if(fmt==='tall'){
+    const tY=cy+16+Math.min(Math.max(ch.length,1),maxRows)*36+(ch.length>maxRows?72:56), tH=Hh-tY-90;
+    if(tH>120){
+      c.font=`800 15px ${F.c}`; c.fillStyle='#1d2a24'; c.fillText((lang==='bg'?'Къде отиват парите':'Where the money goes').toUpperCase(), bx, tY-12);
+      const wrap=(txt,maxW,maxL)=>{ const words=txt.split(' '), out=[]; let cur=''; for(const w of words){ const t2=cur?cur+' '+w:w; if(c.measureText(t2).width<=maxW) cur=t2; else { if(!cur||c.measureText(w).width>maxW) return null; out.push(cur); cur=w; } } out.push(cur); return out.length<=maxL?out:null; };
+      const rects=treemapRects(bw,tH); rects.forEach(r=>{ c.fillStyle=HEX[r.n.hue]; c.fillRect(bx+r.x+1,tY+r.y+1,Math.max(0,r.w-2),Math.max(0,r.h-2));
+        if(r.w<60||r.h<48) return; c.font=`740 16px ${F.c}`; const lines=wrap(name(r.n),r.w-16,Math.min(3,Math.floor((r.h-30)/18))); if(!lines) return;
+        c.fillStyle='#fff'; lines.forEach((ln,i)=>c.fillText(ln,bx+r.x+8,tY+r.y+22+i*18)); c.font=`650 15px ${F.c}`; c.fillText(moneyShort(val(r.n)),bx+r.x+8,tY+r.y+22+lines.length*18); }); }
+  }
+  cardFoot(c,fmt==='wide'?bx:60,Hh-46);
+}
+function cardStrip(c,bx,sy2,bw,sh2){ // composition strip of the player's spending
+  const F=CF; let x=bx; const tot=val(TREE.S);
+  c.font=`800 15px ${F.c}`; c.fillStyle='#1d2a24'; c.fillText((lang==='bg'?'Къде отиват парите':'Where the money goes').toUpperCase(), bx, sy2-10);
+  TREE.S.kids.forEach(g=>{ const w=val(g)/tot*bw; c.fillStyle=HEX[g.hue]; c.fillRect(x,sy2,Math.max(0,w-2),sh2);
+    const s=(SHORT[lang]||SHORT.bg)[g.id]||name(g); for(const fs of [14,12]){ c.font=`740 ${fs}px ${F.c}`; if(c.measureText(s).width<=w-12){ c.fillStyle='#fff'; c.fillText(s,x+6,sy2+sh2/2+5); break; } } x+=w; });
+}
+function cardFoot(c,x,y){
+  c.font=`560 15px ${CF.s}`; c.fillStyle='#5d6a62';
+  const host = /^https?:/.test(location.protocol) && !/^(localhost|127\.)/.test(location.hostname) ? ' · '+location.host : '';
+  c.fillText(t('cardFoot')+host, x, y);
+}
+/* full list: every change, grouped by part of the state; the card grows with the list */
+const LIST_W=1080, LIST_MAXH=14000, LIST_PH=400;
+const LIST_TOP=LIST_PH+60+104+26+108; // panel, title, status, thread, list header
+function topOf(n){ let x=n; while(x.parent && x.parent.level>0) x=x.parent; return x; }
+function clipText(c,txt,maxW){ if(c.measureText(txt).width<=maxW) return txt; let x=txt; while(c.measureText(x+'…').width>maxW && x.length>4) x=x.slice(0,-1); return x.trimEnd()+'…'; }
+function wrapText(c,txt,maxW,maxL){
+  const words=txt.split(' '), out=[]; let cur='';
+  for(const w of words){ const t2=cur?cur+' '+w:w; if(!cur||c.measureText(t2).width<=maxW) cur=t2; else { out.push(cur); cur=w; } }
+  out.push(cur);
+  if(out.length>maxL){ const keep=out.slice(0,maxL); keep[maxL-1]=clipText(c,keep[maxL-1]+' '+out.slice(maxL).join(' '),maxW); return keep; }
+  return out.map(l=>clipText(c,l,maxW));
+}
+const LIST_NAME_W=LIST_W-120-44-230;
+function listLayout(c){
+  const ch=changeList(), items=[];
+  c.font=`650 19px ${CF.s}`;
+  ['S','R'].forEach(side=>{
+    const sc=ch.filter(n=>n.side===side); if(!sc.length) return;
+    items.push({k:'side',side,h:items.length?62:42});
+    TREE[side].kids.forEach(g=>{
+      const gc=sc.filter(n=>topOf(n)===g); if(!gc.length) return;
+      items.push({k:'grp',g,eff:gc.reduce((a,n)=>a+deficitEffect(n),0),h:50});
+      gc.forEach(n=>{ const lines=wrapText(c,name(n),LIST_NAME_W,2); items.push({k:'row',n,lines,h:lines.length>1?66:44}); });
+    });
+  });
+  const tail=(ch.length?130:60)+190; // net-effect block, then strip + footer
+  let y=LIST_TOP+(ch.length?0:40); const shown=[]; let cut=0;
+  for(const it of items){ if(y+it.h>LIST_MAXH-tail-44){ if(it.k==='row') cut++; continue; } shown.push(it); y+=it.h; }
+  if(cut) y+=44;
+  return {items:shown,cut,ch,H:Math.ceil(y+tail)};
+}
+function drawList(){
+  const cv=document.getElementById('card'), W=LIST_W, F=CF;
+  const L=listLayout(cv.getContext('2d')), Hh=L.H;
+  cv.width=W; cv.height=Hh; const c=cv.getContext('2d'); c.textBaseline='alphabetic';
+  const {D}=totals(), ph=LIST_PH;
+  cardHead(c,W,Hh,W,ph,{big:190,numX:60,numY:262,sub1:52,subF:30,draftF:22,rx:W-200,ry:ph*0.5});
+  const bx=60, bw=W-120, by=ph+60;
+  cardTitle(c,bx,by,60,28);
+  const ty=by+104, thh=26; cardThread(c,bx,ty,bw,thh);
+  // list header
+  let y=ty+thh+86;
+  c.fillStyle='#1d2a24'; c.font=`800 17px ${F.c}`; c.fillText((L.ch.length?t('cardAll')(L.ch.length):t('cardChanges')).toUpperCase(), bx, y);
+  if(L.ch.length){ c.save(); c.font=`740 13px ${F.c}`; if('letterSpacing' in c) c.letterSpacing='1.2px'; c.fillStyle='#5d6a62';
+    const eh=t('cardEff').toUpperCase(); c.fillText(eh, bx+bw-c.measureText(eh).width, y); c.restore(); }
+  y=LIST_TOP;
+  if(!L.ch.length){ c.font=`560 20px ${F.s}`; c.fillStyle='#3f4d45'; c.fillText(t('cardNoChanges'), bx, y+8); y+=40; }
+  const effCol=e=>e<-0.05?'#25603f':e>0.05?'#c8202f':'#3f4d45';
+  for(const it of L.items){
+    if(it.k==='side'){
+      const base=y+it.h-18;
+      c.save(); c.font=`800 15px ${F.c}`; if('letterSpacing' in c) c.letterSpacing='1.6px'; c.fillStyle='#5d6a62';
+      c.fillText((it.side==='S'?t('cardSpeSide'):t('cardRevSide')).toUpperCase(), bx, base); c.restore();
+      c.fillStyle='#1d2a24'; c.fillRect(bx, base+9, bw, 2); y+=it.h; continue;
+    }
+    if(it.k==='grp'){
+      c.fillStyle=HEX[it.g.hue]; c.fillRect(bx, y+17, 14, 14);
+      c.fillStyle='#1d2a24'; c.font=`800 22px ${F.c}`; c.fillText(name(it.g), bx+24, y+31);
+      const et=money(it.eff,{sign:true}); c.fillStyle=effCol(it.eff); c.fillText(et, bx+bw-c.measureText(et).width, y+31);
+      y+=it.h; continue;
+    }
+    const n=it.n, p=pct[n.key], e=deficitEffect(n);
+    c.strokeStyle='#cbd4c6'; c.lineWidth=1; c.beginPath(); c.moveTo(bx+24,y+.5); c.lineTo(bx+bw,y+.5); c.stroke();
+    c.fillStyle=HEX[n.hue]; c.beginPath(); c.arc(bx+31,y+22,6,0,Math.PI*2); c.fill();
+    c.fillStyle='#1d2a24'; c.font=`650 19px ${F.s}`;
+    it.lines.forEach((ln,i)=>c.fillText(ln, bx+46, y+29+i*23));
+    // parent context after a one-line name, when it fits
+    if(it.lines.length===1 && !n.rest && n.parent && n.parent.level>1){
+      const lw=c.measureText(it.lines[0]).width; c.font=`560 15px ${F.s}`; c.fillStyle='#5d6a62';
+      const ctx='· '+name(n.parent); if(c.measureText(ctx).width<=LIST_NAME_W-lw-10) c.fillText(ctx, bx+46+lw+8, y+29);
+    }
+    c.font=`740 19px ${F.c}`; c.fillStyle='#3f4d45'; const pt=chgTxt(n,p); c.fillText(pt, bx+bw-150-c.measureText(pt).width, y+29);
+    c.font=`740 20px ${F.c}`; c.fillStyle=effCol(e); const et=money(e,{sign:true}); c.fillText(et, bx+bw-c.measureText(et).width, y+29);
+    y+=it.h;
+  }
+  if(L.cut){ c.font=`650 17px ${F.s}`; c.fillStyle='#5d6a62'; c.fillText(t('cardCut')(L.cut), bx+24, y+28); y+=44; }
+  if(L.ch.length){
+    y+=20; c.fillStyle='#1d2a24'; c.fillRect(bx,y,bw,2);
+    const net=L.ch.reduce((a,n)=>a+deficitEffect(n),0);
+    c.font=`800 24px ${F.c}`; c.fillText(t('cardNet'), bx, y+40);
+    const nt=money(net,{sign:true}); c.fillStyle=effCol(net); c.fillText(nt, bx+bw-c.measureText(nt).width, y+40);
+    c.font=`650 18px ${F.s}`; c.fillStyle='#3f4d45';
+    c.fillText(clipText(c,D>0.05?t('cardFromTo')(money(DRAFT_DEFICIT),money(D),pctGdp(D)):t('cardFromToFit')(money(DRAFT_DEFICIT),D<-0.05?money(-D):''),bw), bx, y+74);
+    y+=110;
+  }
+  cardStrip(c,bx,y+40,bw,34);
+  cardFoot(c,bx,Hh-46);
+}
+function syncFmtUI(){
+  const n=changeList().length, cap={wide:5,tall:6}[fmt], hint=document.getElementById('fmtHint');
+  hint.hidden=!(cap&&n>cap); if(!hint.hidden) hint.textContent=t('fmtHint')(cap-1,n);
+  document.getElementById('fmtListSize').textContent=`${LIST_W} × ${listLayout(document.getElementById('card').getContext('2d')).H}`;
+  document.querySelector('#dlg .prev').classList.toggle('long',fmt==='list');
+}
+async function openExport(){
+  await fontsReady(); drawCard(); syncFmtUI();
+  const d=document.getElementById('dlg'); if(typeof d.showModal==='function') d.showModal(); else d.setAttribute('open','');
+  document.getElementById('share').hidden = !(navigator.canShare && navigator.share);
+}
+document.getElementById('exportBtn').addEventListener('click',openExport);
+document.getElementById('dlgClose').addEventListener('click',()=>document.getElementById('dlg').close());
+document.getElementById('dlg').addEventListener('click',e=>{ if(e.target.id==='dlg') e.target.close(); });
+document.querySelectorAll('[data-fmt]').forEach(b=>b.addEventListener('click',()=>{ fmt=b.dataset.fmt; document.querySelectorAll('[data-fmt]').forEach(x=>x.setAttribute('aria-pressed',x===b)); drawCard(); syncFmtUI(); document.querySelector('#dlg .prev').scrollTop=0; }));
+function fileName(){ return `${lang==='bg'?'moyat-byudzhet':'my-budget'}-2027-${serial()}-${fmt}.png`; }
+document.getElementById('dl').addEventListener('click',()=>{
+  const cv=document.getElementById('card');
+  cv.toBlob(b=>{ const a=document.createElement('a'); a.href=URL.createObjectURL(b); a.download=fileName(); document.body.appendChild(a); a.click(); setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},800); },'image/png');
+});
+document.getElementById('share').addEventListener('click',()=>{
+  document.getElementById('card').toBlob(async b=>{
+    const file=new File([b],fileName(),{type:'image/png'});
+    const data={files:[file],title:t('cardTitle'),url:location.href};
+    try{ if(navigator.canShare(data)) await navigator.share(data); else await navigator.share({title:t('cardTitle'),url:location.href}); }catch(e){}
+  },'image/png');
+});
+function toast(msg){ const el=document.getElementById('toast'); el.textContent=msg; el.classList.add('on'); clearTimeout(el._t); el._t=setTimeout(()=>el.classList.remove('on'),2200); }
+document.getElementById('copy').addEventListener('click',async()=>{ persist(); try{ await navigator.clipboard.writeText(location.href); toast(t('copied')); }catch(e){ toast(t('copyFail')); } });
+
+/* ===================== BOOT ===================== */
+(function boot(){
+  const hp=(location.hash.match(/p=([^&]+)/)||[])[1];
+  pct = decode(hp ? decodeURIComponent(hp) : '');
+  if(!hp){ const sv=store.get('ob27.plan'); if(sv && Object.keys(decode(sv)).length) savedPlan=sv; }
+  const sl=store.get('ob27.lang'); const ql=(location.search.match(/lang=(bg|en)/)||[])[1];
+  lang = ql || sl || ((navigator.language||'bg').toLowerCase().startsWith('bg')?'bg':(sl||'bg'));
+  drawHeaderGuilloche();
+  applyLang();
+  if(!store.get('ob27.how')) openHow();
+  const ro = new ResizeObserver(()=>{ const cap=document.getElementById('cap'); document.documentElement.style.setProperty('--capH', (window.innerWidth<1024?cap.offsetHeight:0)+'px'); });
+  ro.observe(document.getElementById('cap'));
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(()=>{ renderTM(); renderCap(); });
+})();
+</script>
+</body>
+</html>
