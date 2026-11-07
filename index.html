@@ -305,6 +305,12 @@ dialog::backdrop{background:rgba(20,32,25,.62)}
   .sheet .s-ctl .rs{background:var(--ink);color:var(--paper);padding:10px 12px}
   .sheet .s-meta{margin-top:6px;font-size:12px;color:var(--ink-3)}
   body.has-sheet footer{padding-bottom:150px}
+  /* long names wrap onto a second line instead of being cut off with … */
+  .row,.total-row{height:auto;min-height:var(--row)}
+  .row .lab,.total-row .lab{white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:break-word;line-height:1.2;padding:6px 0}
+  .row .amt{align-self:center;height:var(--row)}
+  .crumb{height:auto;min-height:30px;white-space:normal;flex-wrap:wrap;row-gap:2px;padding-top:5px;padding-bottom:5px}
+  .sheet .s-top b{white-space:normal;overflow:visible;text-overflow:clip}
 }
 @media (max-width:640px){
   .prev.long{max-height:42vh}
